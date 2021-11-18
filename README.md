@@ -6,11 +6,11 @@ e-commerce de zapatillas
 2. [Technologies](#technologies)
 3. [Collaboration](#collaboration)
 4. [FAQs](#faqs)
-# general-info
+# General-info
 somos un sitio moderno que ofrece un servicio de primera para la venta de zapatillas
-# technologies
+# Technologies
 en este proyecto utilizaremos Java Script para darle dinamismo al sitio, html para crear la estructura y css para darle el disenio
-# collaboration
+# Collaboration
 este proyecto es una colaboracion con digital house
-# faqs
+# Faqs
 nuestro trabajo esta dentro de todos los marcos legales correspondientes al pais
