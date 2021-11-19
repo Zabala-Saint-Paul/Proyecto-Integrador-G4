@@ -18,9 +18,9 @@ Talles desde 6 usa hasta 12 usa
 4. [https://www.marksports.com.ar]
 5. [https://www.newsport.com.ar]
 # Listado De Grupo
-Mateo: Estudiante de secundaria, 17 años, primera vez interactuando con la programacion.
-Celeste: Inciando en el Mundo de Programación, 34 años.
-Hernán: Estudiante crónico de Abogacía, buscando darle una vuelta de tuerca a todo. Posible Programador
-Zaba: Eterno estudiante, en busca del codigo perdido. 28 anios
+1. Mateo: Estudiante de secundaria, 17 años, primera vez interactuando con la programacion.
+2. Celeste: Inciando en el Mundo de Programación, 34 años.
+3. Hernán: Estudiante crónico de Abogacía, buscando darle una vuelta de tuerca a todo. Posible Programador
+4. Zaba: Eterno estudiante, en busca del codigo perdido. 28 anios
 # Link Del Tablero
 https://trello.com/619434fb4a1f2877a360a914
