@@ -12,11 +12,11 @@ Somos un sitio moderno que ofrece un servicio de venta de zapatillas
 # Publico Objetivo
 Talles desde 6 usa hasta 12 usa
 # Listado De 5 Paginas
-https://www.grid.com.ar
-https://www.sportline.com.ar
-https://www.adidas.com.ar
-https://www.marksports.com.ar
-https://www.newsport.com.ar
+1. [https://www.grid.com.ar]
+2. [https://www.sportline.com.ar]
+3. [https://www.adidas.com.ar]
+4. [https://www.marksports.com.ar]
+5. [https://www.newsport.com.ar]
 # Listado De Grupo
 Mateo: Estudiante de secundaria, 17 años, primera vez interactuando con la programacion.
 Celeste: Inciando en el Mundo de Programación, 34 años.
