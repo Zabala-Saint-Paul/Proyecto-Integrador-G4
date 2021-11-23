@@ -1,3 +1,4 @@
+![alt text](https://www.pinterest.com.mx/pin/360991726371724354/)
 # Proyecto-Integrador-G4
 ***
 e-commerce de zapatillas
