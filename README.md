@@ -1,4 +1,5 @@
-![alt text](https://github.com/Zabala-Saint-Paul/Proyecto-Integrador-G4/tree/main/public/images/project.png)
+![alt text](https://raw.githubusercontent.com/Zabala-Saint-Paul/Proyecto-Integrador-G4/tree/main/public/images/project.png)
+
 
 # Proyecto-Integrador-G4
 ***
