@@ -1,22 +1,22 @@
 # Proyecto-Integrador-G4
 ***
 e-commerce de zapatillas
-## Table of Contents
+## Table de Contenido
 1. [Tematica y descripcion del sitio](#Tematica-y-descripcion-del-sitio)
 2. [Publico Objetivo](#Publico-Objetivo)
 3. [Listado De 5 Paginas](#Listado-De-5-Paginas)
 4. [Listado De Grupo](#Listado-De-Grupo)
 5. [Link Del Tablero](#Link-Del-Tablero)
 # Tematica y descripcion del sitio
-Somos un sitio moderno que ofrece un servicio de venta de zapatillas
+Somos un sitio moderno que ofrece un servicio de venta de Pasajes para ir al espacio
 # Publico Objetivo
-Talles desde 6 usa hasta 12 usa
+Personas que quieran viajar al espacio.
 # Listado De 5 Paginas
-1. https://www.grid.com.ar
-2. https://www.sportline.com.ar
-3. https://www.adidas.com.ar
-4. https://www.marksports.com.ar
-5. https://www.newsport.com.ar
+1. https://www.turismocity.com.ar/
+2. https://almundo.com.ar/
+3. https://www.kayak.com.ar/
+4. https://ar.jetcost.com/
+5. https://www.despegar.com.ar
 # Listado De Grupo
 1. Mateo: Estudiante de secundaria, 17 años, primera vez interactuando con la programacion.
 2. Celeste: Inciando en el Mundo de Programación, 34 años.
