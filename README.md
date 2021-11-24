@@ -26,4 +26,4 @@ Personas que quieran viajar al espacio.
 3. Hernán: Estudiante crónico de Abogacía, buscando darle una vuelta de tuerca a todo. Posible Programador
 4. Zaba: Eterno estudiante, en busca del codigo perdido. 28 anios
 # Link Del Tablero
-https://trello.com/619434fb4a1f2877a360a914
+https://trello.com/b/xsBfmBwT/proyecto-integrador-g4
