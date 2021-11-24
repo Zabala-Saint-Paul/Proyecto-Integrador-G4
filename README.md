@@ -3,7 +3,7 @@
 
 # Proyecto-Integrador-G4
 ***
-e-commerce de zapatillas
+e-commerce de pasajes al espacio.
 ## Table de Contenido
 1. [Tematica y descripcion del sitio](#Tematica-y-descripcion-del-sitio)
 2. [Publico Objetivo](#Publico-Objetivo)
