@@ -1,4 +1,4 @@
-!(https://github.com/Zabala-Saint-Paul/Proyecto-Integrador-G4/blob/main/public/images/project.png)
+![alt text](https://github.com/Zabala-Saint-Paul/Proyecto-Integrador-G4/blob/main/public/images/project.png)
 
 
 # Proyecto-Integrador-G4
