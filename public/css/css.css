@@ -1,11 +1,11 @@
 
-header{
+.class1{
     background-color: 6127D0;
-    height: 22em;
+    height: 20em;
     font-weight: bold;
 }
 
-ul {
+.listaNav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -13,12 +13,12 @@ ul {
     background-color: 6127D0;
   }
 
-li {
+.li1 {
     float: right;
     color: #30E3C1;
   }
   
-li a {
+.li1 a {
     display: block;
     color: white;
     text-align: center;
@@ -26,7 +26,7 @@ li a {
     text-decoration: none;
   }
 
-li a:hover {
+.li1 a:hover {
     background-color: #111;
   }
 
@@ -46,4 +46,51 @@ span{
 .icono{
     color: #30E3C1 !important;
     margin-left: 0.5em;
+}
+
+#stFoot{
+  font-size: 2em !important;
+  margin-left: 0em !important;
+
+}
+
+#divFoot{
+  height: 5.2em !important;
+  text-align: center;
+}
+
+#iconoFoot{
+  margin-left: 0em !important;
+}
+
+#crearCuenta{
+  color: #30E3C1;
+  padding-left: 1em;
+  padding-top: 1em;
+}
+
+.liReg{
+  padding-top: 1em;
+}
+
+.liReg input{
+  width: 20em;
+}
+
+#ulReg{
+  list-style: none;
+  padding-left: 2em;
+}
+
+#crear{
+  margin-top: 1em;
+  color: #30E3C1;
+  background-color: 6127D0;
+  font-weight: bold;
+}
+
+#valt{
+  padding-left: 0em;
+  padding-top: 0em;
+  margin-top: 1em;
 }
