@@ -18,6 +18,9 @@ app.get('/register', function(req,res){
 app.get ('/login', function (req,res){
     res.sendFile (path.join(__dirname, './views/login.html'))
 });
+app.get ('/productDetail', function (req,res){
+    res.sendFile (path.join(__dirname, './views/productDetail.html'))
+});
 
 app.listen(420, function(){
     console.log('servidor corriendo');

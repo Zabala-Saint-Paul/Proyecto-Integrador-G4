@@ -1,6 +1,19 @@
 
+header{
+  width:100vw;
+  height: 35vh;
+  background-color:#6127D0 ;
+  border: #30E3C1 solid;
+}
+
+
+footer{
+  background-color: #6127D0;
+  border: #30E3C1 solid;
+}
+
 .class1{
-    background-color: 6127D0;
+    
     height: 20em;
     font-weight: bold;
 }
@@ -10,7 +23,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: 6127D0;
+    
   }
 
 .li1 {
@@ -38,8 +51,8 @@ span{
 
 #slogan{
     margin-left: 2em;
-    margin-top: 2em;
-    margin-bottom: 5em;
+   
+    
     color: #30E3C1;
 }
 
@@ -115,4 +128,48 @@ span{
   font-weight: 500;
   margin-left: 0em;
   margin-top: 0em;
+}
+
+
+
+.titulo-vivi{
+  margin-left: 100px;
+ 
+  background-color: rgb(217, 223, 223);
+    
+  font-weight: 400;
+}
+
+
+main{
+  width:100vw;
+  height: 80vh;
+  background-color: rgb(217, 223, 223);
+ 
+}
+
+.two-column-product{
+  display: flex;
+  background-color: rgb(217, 223, 223);
+ justify-content: space-evenly;
+  
+}
+
+.two-column-product ul li {
+  list-style: none;
+}
+
+.two-column-product img {
+  width: 300px;
+  height: 300px;
+}
+
+
+.column-right-side li{
+  margin: 10px;
+}
+
+.precio{
+  font-size: 30px;
+  color:rgba(235, 42, 8, 0.856)
 }
