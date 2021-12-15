@@ -1,64 +1,63 @@
-
+/* header para todas las ventanas */
 header{
-  width:100vw;
+  width: 100vw;
   height: 35vh;
   background-color:#6127D0 ;
   border: #30E3C1 solid;
 }
 
-
-footer{
-  background-color: #6127D0;
-  border: #30E3C1 solid;
-}
-
 .class1{
     
-    height: 20em;
-    font-weight: bold;
+  height: 20em;                 /* .class1 tambien es para footer */
+  font-weight: bold;
 }
 
 .listaNav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
 
 .li1 {
-    float: right;
-    color: #30E3C1;
-  }
-  
+  float: right;
+  color: #30E3C1;
+}
+
 .li1 a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
 .li1 a:hover {
-    background-color: #111;
-  }
+  background-color: #111;
+}
 
 span{
-    margin-left: 4.8em;
-    font-size: 5em;
-    color: #30E3C1;
+  margin-left: 4.8em;
+  font-size: 5em;
+  color: #30E3C1;
 }
 
 #slogan{
-    margin-left: 2em;
-   
-    
-    color: #30E3C1;
+  margin-left: 2em;
+  color: #30E3C1;
 }
 
 .icono{
-    color: #30E3C1 !important;
-    margin-left: 0.5em;
+  color: #30E3C1 !important;      /* .icono tambien es para footer */
+  margin-left: 0.5em;
+}
+
+
+/* footer para todas las ventanas */
+footer{
+  background-color: #6127D0;
+  border: #30E3C1 solid;
 }
 
 #stFoot{
@@ -76,14 +75,15 @@ span{
   margin-left: 0em !important;
 }
 
+
+/* Register */
 #crearCuenta{
-  color: #30E3C1;
-  padding-left: 1em;
+  padding-left: 0.8em;
   padding-top: 1em;
 }
 
 .liReg{
-  padding-top: 1em;
+  padding-top: 1em;        /* .liReg tambien se usa para Login */
 }
 
 .liReg input{
@@ -91,17 +91,20 @@ span{
 }
 
 #ulReg{
-  list-style: none;
+  list-style: none;       /* #ulReg tambien se usa para Login */
   padding-left: 2em;
 }
 
+
 #crear{
   margin-top: 1em;
-  color: #30E3C1;
-  background-color: 6127D0;
   font-weight: bold;
+  width: 5em;
+  margin-bottom: 1em;
 }
 
+
+/* Login */
 #valt{
   padding-left: 0em;
   padding-top: 0em;
@@ -131,7 +134,7 @@ span{
 }
 
 
-
+/* productDetail */
 .titulo-vivi{
   margin-left: 100px;
  
