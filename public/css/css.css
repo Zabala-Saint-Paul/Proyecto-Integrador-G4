@@ -38,13 +38,14 @@ header{
 }
 
 span{
-  margin-left: 4.8em;
+  margin: 3.8em;
   font-size: 5em;
   color: #30E3C1;
 }
 
 #slogan{
   margin-left: 2em;
+  margin-top: -1em;
   color: #30E3C1;
 }
 
@@ -97,10 +98,7 @@ footer{
 
 
 #crear{
-  margin-top: 1em;
-  font-weight: bold;
-  width: 5em;
-  margin-bottom: 1em;
+  placeholder="Usuario"
 }
 
 
@@ -111,10 +109,12 @@ footer{
   margin-top: 1em;
 }
 
+/*pagina login*/
 #login{
-  color: #30E3C1;
   padding-left: 1em;
   padding-top: 1em;
+  justify-content: space-evenly;
+  display: flex;
 }
 
 #ingresar{
@@ -175,4 +175,13 @@ main{
 .precio{
   font-size: 30px;
   color:rgba(235, 42, 8, 0.856)
+}
+
+
+/* formulario de login*/
+.logi{
+  display: flex;
+  background-color: rgb(217, 223, 223);
+  justify-content: center ;
+  
 }

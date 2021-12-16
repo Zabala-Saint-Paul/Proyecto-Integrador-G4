@@ -44,25 +44,30 @@
         </header>
         
         <main>
-            <h1 id = "login"> Ingresa a tu Cuenta</h1>
-            <div>
-                <ul id = "ulReg">
-                    <li class = "liReg">
-                        <input placeholder="Usuario"/>
-                    </li>
-                    <li class = "liReg">
-                        <input placeholder="Contraseña"/>
-                    </li>
-                    <li>
-                        <button id = "ingresar" type="button" class="btn btn-primary">Ingresar</button>
-                    </li>
-                    <li>
+            <h1 id = "login"> Ingresa a tu Cuenta</h1> 
+            <br>
+            <div class="logi">              
+                <form action="/login" method="POST">
+                    <p>
+                      <!-- campo para el usuario -->
+                      <input type="text" placeholder="Usuario" name="usuario" required>
+                    </p>
+                   
+                    <p>
+                      <!-- campo para la contraseña -->
+                      <input type="password" placeholder="Contraseña" name="password" required >
+                    </p>
+                    <p>
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                    </p>
+                    <p>
                         <button id = "valt" type="button" class="btn btn-link">¿Olvidó su contraseña?</button>
-                    </li>
+                    </p>
+                    <p>
                         <span id= 'noTenesCta' >¿No tenés una cuenta?</span>
                         <a href = '/register'>Registrate</a>
-                    </li>
-                </ul>
+                    </p>
+                </form>
             </div>
             <br></br>
             <br></br>
