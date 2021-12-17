@@ -5,7 +5,11 @@ header{
   background-color:#6127D0 ;
   border: #30E3C1 solid;
 }
-
+.nav-bar{
+    
+  height: 20em;                 /* .class1 tambien es para footer */
+  font-weight: bold;
+}
 .class1{
     
   height: 20em;                 /* .class1 tambien es para footer */
@@ -184,4 +188,322 @@ main{
   background-color: rgb(217, 223, 223);
   justify-content: center ;
   
+}
+/*medidas para celulares*/
+@media only screen and (max-width:361px) {
+  /* header para todas las ventanas */
+header{
+  width: 100vw;
+  height: 25vh;
+  background-color:#6127D0 ;
+  border: #30E3C1 solid;
+}
+
+/* header para todas las ventanas */
+header{
+  width: 100vw;
+  height: 35vh;
+  background-color:#6127D0 ;
+  border: #30E3C1 solid;
+}
+.nav-bar{
+  display: none; 
+  height: 20em;                 /* .class1 tambien es para footer */
+  font-weight: bold;
+}
+.class1{
+    
+  height: 20em;                 /* .class1 tambien es para footer */
+  font-weight: bold;
+}
+
+.listaNav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+.li1 {
+  float: right;
+  color: #30E3C1;
+}
+
+.li1 a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.li1 a:hover {
+  background-color: #111;
+}
+
+span{
+  margin: 3.8em;
+  font-size: 5em;
+  color: #30E3C1;
+}
+
+#slogan{
+  margin-left: 2em;
+  margin-top: -1em;
+  color: #30E3C1;
+}
+
+.icono{
+  color: #30E3C1 !important;      /* .icono tambien es para footer */
+  margin-left: 0em;
+  font-size: 70px;
+}
+
+
+/* footer para todas las ventanas */
+footer{
+  background-color: #6127D0;
+  border: #30E3C1 solid;
+}
+
+#stFoot{
+  font-size: 2em !important;
+  margin-left: 0em !important;
+
+}
+
+#divFoot{
+  height: 5.2em !important;
+  text-align: center;
+}
+
+#iconoFoot{
+  margin-left: 0em !important;
+}
+
+.listaNav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+.li1 {
+  float: right;
+  color: #30E3C1;
+}
+
+.li1 a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.li1 a:hover {
+  background-color: #111;
+}
+
+span{
+  margin: 3.8em;
+  font-size: 5em;
+  color: #30E3C1;
+}
+
+#slogan{
+  margin-left: 2em;
+  margin-top: -1em;
+  color: #30E3C1;
+}
+
+.icono{
+  color: #30E3C1 !important;      /* .icono tambien es para footer */
+  margin-left: 0.5em;
+}
+
+
+/* footer para todas las ventanas */
+footer{
+  background-color: #6127D0;
+  border: #30E3C1 solid;
+}
+
+#stFoot{
+  font-size: 2em !important;
+  margin-left: 0em !important;
+
+}
+
+#divFoot{
+  height: 5.2em !important;
+  text-align: center;
+}
+
+#iconoFoot{
+  margin-left: 0em !important;
+}
+}
+
+/*medidas para tables*/
+@media only screen and (max-width:769px) and (min-width:362px) {
+  /* header para todas las ventanas */
+header{
+  width: 100vw;
+  height: 35vh;
+  background-color:#6127D0 ;
+  border: #30E3C1 solid;
+}
+
+.class1{
+    
+  height: 20em;                 /* .class1 tambien es para footer */
+  font-weight: bold;
+}
+
+.listaNav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+.li1 {
+  float: right;
+  color: #30E3C1;
+}
+
+.li1 a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.li1 a:hover {
+  background-color: #111;
+}
+
+span{
+  margin: 3.8em;
+  font-size: 5em;
+  color: #30E3C1;
+}
+
+#slogan{
+  margin-left: 2em;
+  margin-top: -1em;
+  color: #30E3C1;
+}
+
+.icono{
+  color: #30E3C1 !important;      /* .icono tambien es para footer */
+  margin-left: 0.5em;
+}
+
+
+/* footer para todas las ventanas */
+footer{
+  background-color: #6127D0;
+  border: #30E3C1 solid;
+}
+
+#stFoot{
+  font-size: 2em !important;
+  margin-left: 0em !important;
+
+}
+
+#divFoot{
+  height: 5.2em !important;
+  text-align: center;
+}
+
+#iconoFoot{
+  margin-left: 0em !important;
+}
+}
+/*medidas para compus*/
+@media only screen and (min-width:769px) {
+  /* header para todas las ventanas */
+header{
+  width: 100vw;
+  height: 35vh;
+  background-color:#6127D0 ;
+  border: #30E3C1 solid;
+}
+
+.class1{
+    
+  height: 20em;                 /* .class1 tambien es para footer */
+  font-weight: bold;
+}
+
+.listaNav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+.li1 {
+  float: right;
+  color: #30E3C1;
+}
+
+.li1 a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.li1 a:hover {
+  background-color: #111;
+}
+
+span{
+  margin: 3.8em;
+  font-size: 5em;
+  color: #30E3C1;
+}
+
+#slogan{
+  margin-left: 2em;
+  margin-top: -1em;
+  color: #30E3C1;
+}
+
+.icono{
+  color: #30E3C1 !important;      /* .icono tambien es para footer */
+  margin-left: 0.5em;
+}
+
+
+/* footer para todas las ventanas */
+footer{
+  background-color: #6127D0;
+  border: #30E3C1 solid;
+}
+
+#stFoot{
+  font-size: 2em !important;
+  margin-left: 0em !important;
+
+}
+
+#divFoot{
+  height: 5.2em !important;
+  text-align: center;
+}
+
+#iconoFoot{
+  margin-left: 0em !important;
+}
 }
