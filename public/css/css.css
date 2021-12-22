@@ -84,18 +84,46 @@ span{
   color: #30E3C1 !important;      /* .icono tambien es para footer */
   margin-left: 0.5em;
 }
+.titulo-paquetes{
+  text-align: center;
+  font-size: 20px;
+}
+.descripcion-sitio{
+  text-align: center;
+  font-size: 15px;
+  width: 90%;
+}
+
+.paquetito{
+  
+  text-align: center;
+}
+.descripcion-paquetito{
+  font-size: 10px;
+  text-align: center;
+}
 
 
+.group-imagenes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}
+/*-======================PAQUETES GRUPO=====================*/
+
+.group-paquetes{
+  display: flex;
+  justify-content: space-evenly;
+}
 /* footer para todas las ventanas */
 footer{
   background-color: #6127D0;
-  
 }
 
 #stFoot{
   font-size: 2em !important;
   margin-left: 0em !important;
-
 }
 
 #divFoot{
@@ -125,8 +153,11 @@ footer{
 #ulReg{
   list-style: none;       /* #ulReg tambien se usa para Login */
   padding-left: 2em;
+  display: flex;
+  flex-direction: column;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 
 #crear{
@@ -136,6 +167,13 @@ footer{
 
 >>>>>>> 9eb305afb4248dee0a25e03a9668d8717a7f2dd7
 
+=======
+#crear{
+  margin-top: 0.6em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+}
+>>>>>>> ab95d05836e80f8d3de2a51e00a7559d782a14d6
 
 /* Login */
 #valt{
