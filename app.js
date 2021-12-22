@@ -21,6 +21,9 @@ app.get ('/login', function (req,res){
 app.get ('/productDetail', function (req,res){
     res.sendFile (path.join(__dirname, './views/productDetail.html'))
 });
+app.get ('/productCart', function (req,res){
+    res.sendFile (path.join(__dirname, './views/productCart.html'))
+});
 
 app.listen(420, function(){
     console.log('servidor corriendo');
