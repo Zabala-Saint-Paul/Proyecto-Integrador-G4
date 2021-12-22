@@ -63,12 +63,12 @@ span{
 footer{
   background-color: #6127D0;
   border: #30E3C1 solid;
+  width: 100%;
 }
 
 #stFoot{
   font-size: 2em !important;
   margin-left: 0em !important;
-
 }
 
 #divFoot{
@@ -98,13 +98,15 @@ footer{
 #ulReg{
   list-style: none;       /* #ulReg tambien se usa para Login */
   padding-left: 2em;
+  display: flex;
+  flex-direction: column;
 }
-
 
 #crear{
-  placeholder="Usuario"
+  margin-top: 0.6em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
-
 
 /* Login */
 #valt{
