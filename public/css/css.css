@@ -1,9 +1,15 @@
 /* header para todas las ventanas */
 header{
-  width: 100vw;
-  height: 35vh;
+  width: 100%;
+  height: 15%;
   background-color:#6127D0 ;
   border: #30E3C1 solid;
+}
+
+.top-nav-bar{
+  display: flex;
+  margin-top: 20px;
+  
 }
 .nav-bar{
     
@@ -14,6 +20,26 @@ header{
     
   height: 20em;                 /* .class1 tambien es para footer */
   font-weight: bold;
+  margin-right: 70px;
+}
+
+.skyTrip{
+  color: #30E3C1;
+  font-weight: 400;
+  text-align: center;
+  margin-left:80px;
+}
+.hamburguer-button{
+  background-color:#03264C; 
+  color: white;
+  display: block;
+  max-width: 50px;
+  padding: 13px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 15px;
+  margin: auto;
+
 }
 
 .listaNav {
@@ -51,6 +77,7 @@ span{
   margin-left: 2em;
   margin-top: -1em;
   color: #30E3C1;
+  text-align: center;
 }
 
 .icono{
@@ -62,8 +89,6 @@ span{
 /* footer para todas las ventanas */
 footer{
   background-color: #6127D0;
-  border: #30E3C1 solid;
-  width: 100%;
 }
 
 #stFoot{
@@ -142,7 +167,8 @@ footer{
 
 /* productDetail */
 .titulo-vivi{
-  margin-left: 100px;
+  
+  margin-left: 200px;
  
   background-color: rgb(217, 223, 223);
     
@@ -152,12 +178,15 @@ footer{
 
 main{
   width:100vw;
-  height: 80vh;
+  
   background-color: rgb(217, 223, 223);
+  
+  
  
 }
 
 .two-column-product{
+  margin-top: 50px;
   display: flex;
   background-color: rgb(217, 223, 223);
  justify-content: space-evenly;
@@ -191,20 +220,15 @@ main{
   justify-content: center ;
   
 }
-/*medidas para celulares*/
-@media only screen and (max-width:361px) {
-  /* header para todas las ventanas */
-header{
-  width: 100vw;
-  height: 25vh;
-  background-color:#6127D0 ;
-  border: #30E3C1 solid;
-}
+/*================================MEDIDAS PARA CELULARES==========================================================*/
+@media only screen and (max-width:480px) {
+  
+
 
 /* header para todas las ventanas */
 header{
   width: 100vw;
-  height: 35vh;
+  height: 40vh;
   background-color:#6127D0 ;
   border: #30E3C1 solid;
 }
@@ -217,8 +241,14 @@ header{
     
   height: 20em;                 /* .class1 tambien es para footer */
   font-weight: bold;
+  display:none;
 }
-
+.skyTrip{
+  color: #30E3C1;
+  font-weight: 400;
+  text-align: center;
+  font-size: 40px;
+}
 .listaNav {
   list-style-type: none;
   margin: 0;
@@ -251,86 +281,59 @@ span{
 }
 
 #slogan{
-  margin-left: 2em;
-  margin-top: -1em;
+  margin-left: 20px;
+  margin-top: 20px;
   color: #30E3C1;
+
 }
 
 .icono{
   color: #30E3C1 !important;      /* .icono tambien es para footer */
-  margin-left: 0em;
+  margin-left: 30px;
   font-size: 70px;
+  margin-top: 20px;
 }
 
+/* =========================================================productDetail */
 
-/* footer para todas las ventanas */
-footer{
-  background-color: #6127D0;
-  border: #30E3C1 solid;
-}
 
-#stFoot{
-  font-size: 2em !important;
-  margin-left: 0em !important;
 
-}
 
-#divFoot{
-  height: 5.2em !important;
-  text-align: center;
-}
 
-#iconoFoot{
-  margin-left: 0em !important;
-}
-
-.listaNav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.two-column-product{
+  
+  display: flex;
+  background-color: rgb(217, 223, 223);
+ justify-content: center;
+ flex-wrap: wrap;
+ margin-top: 0px;
   
 }
 
-.li1 {
-  float: right;
-  color: #30E3C1;
-}
-
-.li1 a {
-  display: block;
-  color: white;
+.two-column-product ul li {
+  list-style: none;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
 }
 
-.li1 a:hover {
-  background-color: #111;
-}
-
-span{
-  margin: 3.8em;
-  font-size: 5em;
-  color: #30E3C1;
-}
-
-#slogan{
-  margin-left: 2em;
-  margin-top: -1em;
-  color: #30E3C1;
-}
-
-.icono{
-  color: #30E3C1 !important;      /* .icono tambien es para footer */
-  margin-left: 0.5em;
+.two-column-product img {
+  width: 200px;
+  height: 200px;
 }
 
 
+.column-right-side li{
+  margin: 10px;
+}
+
+.precio{
+  font-size: 30px;
+  color:rgba(235, 42, 8, 0.856)
+}
 /* footer para todas las ventanas */
 footer{
   background-color: #6127D0;
   border: #30E3C1 solid;
+ 
 }
 
 #stFoot{
@@ -340,17 +343,21 @@ footer{
 }
 
 #divFoot{
-  height: 5.2em !important;
+  
   text-align: center;
 }
 
 #iconoFoot{
   margin-left: 0em !important;
 }
-}
+
+
+
+
+
 
 /*medidas para tables*/
-@media only screen and (max-width:769px) and (min-width:362px) {
+@media only screen and (max-width:769px) and (min-width:481px) {
   /* header para todas las ventanas */
 header{
   width: 100vw;
@@ -372,7 +379,12 @@ header{
   overflow: hidden;
   
 }
-
+.skyTrip{
+  color: #30E3C1;
+  font-weight: 400;
+  text-align: center;
+  font-size: 40px;
+}
 .li1 {
   float: right;
   color: #30E3C1;
@@ -397,8 +409,8 @@ span{
 }
 
 #slogan{
-  margin-left: 2em;
-  margin-top: -1em;
+  margin-top: 20px;
+  
   color: #30E3C1;
 }
 
@@ -508,4 +520,4 @@ footer{
 #iconoFoot{
   margin-left: 0em !important;
 }
-}
+}}
