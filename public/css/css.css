@@ -194,6 +194,8 @@ span{
 footer{
   background-color: #6127D0;
   border: #30E3C1 solid;
+  width: 100%;
+  padding-bottom: 1.30em;
 }
 
 #stFoot{
@@ -203,7 +205,6 @@ footer{
 }
 
 #divFoot{
-  height: 5.2em !important;
   text-align: center;
 }
 
