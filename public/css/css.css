@@ -1,7 +1,7 @@
 /* header para todas las ventanas */
 header{
-  width: 100%;
-  height: 15%;
+  width: 100vw;
+  height: 25vh;
   background-color:#6127D0 ;
   border: #30E3C1 solid;
 }
@@ -9,6 +9,8 @@ header{
 .top-nav-bar{
   display: flex;
   margin-top: 20px;
+  justify-content: space-around;
+  align-items: center;
   
 }
 .nav-bar{
@@ -18,16 +20,19 @@ header{
 }
 .class1{
     
-  height: 20em;                 /* .class1 tambien es para footer */
+  height: 2em;                 /* .class1 tambien es para footer */
   font-weight: bold;
   margin-right: 70px;
+  align-self: flex-start;
 }
 
 .skyTrip{
   color: #30E3C1;
-  font-weight: 400;
+  font-weight: bold;
   text-align: center;
-  margin-left:80px;
+  margin-left:100px;
+  font-size: 60px;
+
 }
 .hamburguer-button{
   background-color:#30e3c2ce; 
@@ -76,14 +81,14 @@ span{
 
 #slogan{
   margin-left: 2em;
-  margin-top: -1em;
   color: #30E3C1;
-  text-align: center;
+
 }
 
 .icono{
   color: #30E3C1 !important;      /* .icono tambien es para footer */
   margin-left: 0.5em;
+  font-size: 5em;
 }
 .titulo-paquetes{
   text-align: center;
@@ -125,7 +130,6 @@ span{
 /* ==============================produCtart ==========================*/
 
 #finCom{
-  margin-left: 5em;
   margin-top: 1em;
   color: #30E3C1;
   background-color: 6127D0;
@@ -209,8 +213,10 @@ footer{
 /* Register */
 #crearCuenta{
   padding-left: 0.8em;
-  padding-top: 1em;
+  
 }
+
+
 
 .liReg{
   padding-top: 1em;        /* ========================.liReg tambien se usa para Login */
@@ -219,12 +225,16 @@ footer{
 .liReg input{
   width: 20em;
 }
+.forminput{
+  width: 18em;
+}
 
 #ulReg{
   list-style: none;       /*==========================#ulReg tambien se usa para Login */
   padding-left: 2em;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 
@@ -238,7 +248,6 @@ footer{
 
 /*pagina login*/
 #login{
-  padding-left: 1em;
   padding-top: 1em;
   justify-content: space-evenly;
   display: flex;
@@ -258,6 +267,7 @@ footer{
   font-weight: 500;
   margin-left: 0em;
   margin-top: 0em;
+  margin-right: 0em;
 }
 
 
@@ -282,7 +292,6 @@ main{
 }
 
 .two-column-product{
-  margin-top: 50px;
   display: flex;
   background-color: rgb(217, 223, 223);
  justify-content: space-evenly;
@@ -316,6 +325,12 @@ main{
   justify-content: center ;
   
 }
+.formlogin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*================================MEDIDAS PARA CELULARES==========================================================*/
 @media only screen and (max-width:480px) {
   
@@ -377,8 +392,8 @@ span{
 }
 
 #slogan{
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
   color: #30E3C1;
 
 }
@@ -528,7 +543,7 @@ footer{
 
 
 
-
+/*================================MEDIDAS PARA TABLETS==========================================================*/
 
 /*medidas para tables*/
 @media only screen and (max-width:769px) and (min-width:481px) {
@@ -539,11 +554,18 @@ header{
   background-color:#6127D0 ;
   border: #30E3C1 solid;
 }
-
+.top-nav-bar{
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  
+}
 .class1{
     
-  height: 20em;                 /* .class1 tambien es para footer */
+  height: 2em;
   font-weight: bold;
+  margin-right: 9px;
+  align-self: flex-start;
 }
 
 .listaNav {
@@ -555,9 +577,9 @@ header{
 }
 .skyTrip{
   color: #30E3C1;
-  font-weight: 400;
+  font-weight: bold;
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
 }
 .li1 {
   float: right;
@@ -584,13 +606,12 @@ span{
 
 #slogan{
   margin-top: 20px;
-  
   color: #30E3C1;
 }
 
 .icono{
   color: #30E3C1 !important;      /* .icono tambien es para footer */
-  margin-left: 0.5em;
+  margin-left: 0.2em;
 }
 
 
@@ -627,7 +648,7 @@ header{
 
 .class1{
     
-  height: 20em;                 /* .class1 tambien es para footer */
+  height: 2em;                 /* .class1 tambien es para footer */
   font-weight: bold;
 }
 
@@ -694,5 +715,5 @@ footer{
 #iconoFoot{
   margin-left: 0em !important;
 }
-}}
-
+}
+}
