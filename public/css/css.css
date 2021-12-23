@@ -30,15 +30,16 @@ header{
   margin-left:80px;
 }
 .hamburguer-button{
-  background-color:#03264C; 
+  background-color:#30e3c2ce; 
   color: white;
-  display: block;
+  display: none;
   max-width: 50px;
   padding: 13px 0;
   border-radius: 8px;
   text-align: center;
   font-size: 15px;
   margin: auto;
+  
 
 }
 
@@ -104,12 +105,23 @@ span{
 }
 
 
-.group-imagenes{
+.group-imagenes-padre{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+
   
 }
+
+.group-imagenes-hijo{
+  align-items: center;
+}
+.imagen-hijo{
+  width: 200px;
+  height: 200px;
+
+}
+
 /* ==============================produCtart ==========================*/
 
 #finCom{
@@ -138,6 +150,42 @@ span{
   display: flex;
   justify-content: space-evenly;
 }
+
+.titulo-paquetes{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  
+  color: #6127D0;
+  
+}
+.descripcion-sitio{
+  text-align: center;
+  font-size: 15px;
+  width: 90%;
+  color: #6127D0;
+}
+
+.paquetito{
+
+  
+  
+  text-align: center;
+}
+.descripcion-paquetito{
+  font-size: 14px;
+  text-align: center;
+  color: #6127D0;
+  font-weight: bold;
+}
+.logo-paquetito{
+  font-size: 35px;
+  color: #6127D0;
+
+
+}
+
+
 /* footer para todas las ventanas */
 footer{
   background-color: #6127D0;
@@ -165,7 +213,7 @@ footer{
 }
 
 .liReg{
-  padding-top: 1em;        /* .liReg tambien se usa para Login */
+  padding-top: 1em;        /* ========================.liReg tambien se usa para Login */
 }
 
 .liReg input{
@@ -173,7 +221,7 @@ footer{
 }
 
 #ulReg{
-  list-style: none;       /* #ulReg tambien se usa para Login */
+  list-style: none;       /*==========================#ulReg tambien se usa para Login */
   padding-left: 2em;
   display: flex;
   flex-direction: column;
@@ -340,6 +388,84 @@ span{
   margin-left: 30px;
   font-size: 70px;
   margin-top: 20px;
+}
+
+.hamburguer-button{
+  background-color:#30e3c2ce; 
+  color: white;
+  display: block;
+  max-width: 50px;
+  padding: 13px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 15px;
+  margin: auto;
+}
+
+
+/*==================================Sección paquetes celulares==========================*/
+
+
+.group-paquetes{
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+
+
+.titulo-paquetes{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  
+  color: #6127D0;
+  
+}
+.descripcion-sitio{
+  text-align: center;
+  font-size: 15px;
+  width: 90%;
+  color: #6127D0;
+}
+
+.paquetito{
+
+  
+  
+  text-align: center;
+}
+.descripcion-paquetito{
+  font-size: 14px;
+  text-align: center;
+  color: #6127D0;
+  font-weight: bold;
+}
+.logo-paquetito{
+  font-size: 35px;
+  color: #6127D0;
+
+
+}
+
+/*==================================Sección Imagenes celulares==========================*/
+
+
+.group-imagenes-padre{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  
+}
+
+.group-imagenes-hijo{
+  align-items: center;
+}
+.imagen-hijo{
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+
 }
 
 /* =========================================================productDetail */
