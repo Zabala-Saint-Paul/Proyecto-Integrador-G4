@@ -73,6 +73,10 @@ header{
   background-color: #111;
 }
 
+.href{
+  color: #30E3C1 !important;
+}
+
 span{
   margin: 3.8em;
   font-size: 5em;
