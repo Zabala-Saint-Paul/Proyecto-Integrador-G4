@@ -520,11 +520,18 @@ span{
   text-align: center;
 }
 
+.column-right-side{
+  padding-left: 0%;
+}
+
+#ulImagenes{
+  padding-left: 0%;
+}
+
 .two-column-product img {
   width: 200px;
   height: 200px;
 }
-
 
 .column-right-side li{
   margin: 10px;
