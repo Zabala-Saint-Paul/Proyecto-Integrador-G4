@@ -25,6 +25,11 @@ app.get ('/productCart', function (req,res){
     res.sendFile (path.join(__dirname, './views/productCart.html'))
 });
 
+/*
 app.listen(420, function(){
     console.log('servidor corriendo');
 });
+*/
+app.listen(process.env.PORT || 420, function(){
+    console.log('Servidor corriendo en el puerto 420')
+})
