@@ -358,6 +358,14 @@ header{
   height: 40vh;
   background-color:#6127D0 ;
   border: #30E3C1 solid;
+
+}
+.top-nav-bar{
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  
 }
 .nav-bar{
   display: none; 
@@ -411,6 +419,7 @@ span{
   margin-left: 10px;
   margin-top: 10px;
   color: #30E3C1;
+  text-align: center;
 
 }
 
