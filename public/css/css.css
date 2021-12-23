@@ -157,23 +157,7 @@ footer{
   flex-direction: column;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* 
-#crear{
-  placeholder="Usuario"
-}*/
-=======
 
->>>>>>> 9eb305afb4248dee0a25e03a9668d8717a7f2dd7
-
-=======
-#crear{
-  margin-top: 0.6em;
-  padding-right: 1.5em;
-  padding-left: 1.5em;
-}
->>>>>>> ab95d05836e80f8d3de2a51e00a7559d782a14d6
 
 /* Login */
 #valt{
@@ -563,3 +547,25 @@ footer{
   margin-left: 0em !important;
 }
 }}
+
+/* produCtart */
+
+#finCom{
+  margin-left: 5em;
+  margin-top: 1em;
+  color: #30E3C1;
+  background-color: 6127D0;
+  font-weight: bold;
+}
+#tusCompras{
+  padding-left: 1em;
+  padding-top: 1em;
+  justify-content: space-evenly;
+  display: flex;
+}
+.datComp{
+  display: flex;
+  background-color: rgb(217, 223, 223);
+  justify-content: center ;
+  
+}
