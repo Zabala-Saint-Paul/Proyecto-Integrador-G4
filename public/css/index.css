@@ -1,0 +1,121 @@
+/*Sección Imagenes*/
+
+.group-imagenes-padre{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.group-imagenes-hijo{
+  align-items: center;
+}
+
+.imagen-hijo{
+  width: 200px;
+  height: 200px;
+}
+
+/*Sección paquetes*/
+
+.group-paquetes{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.titulo-paquetes{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #6127D0;
+}
+
+.descripcion-sitio{
+  text-align: center;
+  font-size: 15px;
+  width: 90%;
+  color: #6127D0;
+}
+
+.paquetito{
+  text-align: center;
+}
+
+.paquetito:hover .logo-paquetito{
+  color: orange;
+}
+
+.paquetito:hover .descripcion-paquetito{
+  color: orange;
+}
+
+.descripcion-paquetito{
+  font-size: 14px;
+  text-align: center;
+  color: #6127D0;
+  font-weight: bold;
+}
+
+.logo-paquetito{
+  font-size: 35px;
+  color: #6127D0;
+}
+
+/*================MEDIDA PARA CELULARES================*/
+
+@media only screen and (max-width:480px) {
+
+/*Sección paquetes celulares*/
+
+.group-paquetes{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.titulo-paquetes{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #6127D0; 
+}
+
+.descripcion-sitio{
+  text-align: center;
+  font-size: 15px;
+  width: 90%;
+  color: #6127D0;
+}
+
+.paquetito{
+  text-align: center;
+}
+
+.descripcion-paquetito{
+  font-size: 14px;
+  text-align: center;
+  color: #6127D0;
+  font-weight: bold;
+}
+
+.logo-paquetito{
+  font-size: 35px;
+  color: #6127D0;
+}
+
+/*Sección Imagenes celulares*/
+
+.group-imagenes-padre{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.group-imagenes-hijo{
+  align-items: center;
+}
+
+.imagen-hijo{
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+}
