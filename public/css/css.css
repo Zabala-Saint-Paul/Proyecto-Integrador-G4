@@ -578,7 +578,7 @@ footer{
 /*================================MEDIDAS PARA TABLETS==========================================================*/
 
 /*medidas para tables*/
-@media only screen and (max-width:769px) and (min-width:481px) {
+@media only screen and (min-width:481px) and (max-width:768px) {
   /* header para todas las ventanas */
 header{
   width: 100vw;
@@ -590,6 +590,7 @@ header{
   display: flex;
   padding: 15px;
   align-items: center;
+  justify-content: space-evenly;
   
 }
 .class1{
@@ -599,6 +600,7 @@ header{
   margin-right: 9px;
   align-self: flex-start;
 }
+
 
 .listaNav {
   list-style-type: none;
@@ -611,7 +613,7 @@ header{
   color: #30E3C1;
   font-weight: bold;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
 }
 .li1 {
   float: right;
@@ -668,6 +670,9 @@ footer{
   margin-left: 0em !important;
 }
 }
+
+
+
 /*medidas para compus*/
 @media only screen and (min-width:769px) {
   /* header para todas las ventanas */
