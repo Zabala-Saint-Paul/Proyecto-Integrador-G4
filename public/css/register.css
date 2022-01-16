@@ -1,8 +1,8 @@
 #crearCuenta{
-    padding-top: 1em;
-    justify-content: space-evenly;
-    display: flex;
-    margin-left: 0%;
+  padding-top: 1em;
+  justify-content: space-evenly;
+  display: flex;
+  margin-left: 0%;
 }
 
 #crear{
@@ -15,10 +15,6 @@
 }
 
 .liReg input{
-  width: 20em;
-}
-
-.forminput{
   width: 18em;
 }
 
@@ -31,17 +27,17 @@
 }
 
 #tenesCuenta{
-    color: rgba(0, 0, 0, 0.48);
-    font-size: 14px;
-    font-weight: 500;
-    margin-left: 0em;
-    margin-top: 0em;
-    margin-right: 0em;
+  color: rgba(0, 0, 0, 0.48);
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 0em;
+  margin-top: 0em;
+  margin-right: 0em;
 }
 
 .regForm{
-    display: flex;
-    background-color: rgb(217, 223, 223);
-    justify-content: center ;
-    padding-left: 0%;
+  display: flex;
+  background-color: rgb(217, 223, 223);
+  justify-content: center ;
+  padding-left: 0%;
 }
