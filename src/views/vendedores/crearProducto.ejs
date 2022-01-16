@@ -1,0 +1,67 @@
+
+<html>
+
+	
+	<!-- HEAD-->
+
+	<%- include('./../partials/head') %> 
+
+	<!-- HEAD -->
+
+	
+<body>
+	<!-- HEADER-->
+
+	<%- include('./../partials/header') %> 
+
+	<!-- HEADER -->
+
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Formulario de Viajes a Ofrecer</h2>
+			</div>
+		</div>
+		<div class="col-12">
+			<form action="/products/create" method="POST">
+				<div class="row ">
+					<div class="col-12 col-md-6">
+						<label for="name" class="form-label">Nombre del producto:</label>
+						<input type="text" id="name" name="name" placeholder="Ej: VIaje a Marte" >
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="price" class="form-label">Precio del producto:</label>
+						<input type="text" id="price" name="price" placeholder="Ej: 123000000" >
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="discount" class="form-label">Descuento:</label>
+						<input type="text" id="discount" name="discount" placeholder="Ej: 30" >
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="category" >Categoría:</label>
+						<select name="category" id="category" >
+							<option value="">Elegí</option>
+							<option value="in-sale">En oferta</option>
+							<option value="visited">Últimos agregados</option>
+						</select>
+					</div>
+					<div class="col-12">
+						<label for="description" class="form-label">Descripción:</label>
+						<textarea name="description" id="description" ></textarea>
+					</div>
+					<div class="col-12">
+						<button type="submit" >Guardar producto</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+</body>	
+	<!-- FOOTER-->
+
+	<%- include('./../partials/footer') %> 
+
+	<!-- FOOTER -->
+</html>

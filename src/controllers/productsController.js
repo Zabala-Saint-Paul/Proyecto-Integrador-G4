@@ -12,7 +12,15 @@ const controller = {
     },
     productDetail: function(req, res){
         res.render('./products/productDetail')
+    },
+    crearProducto: function(req,res){
+        res.render('./vendedores/crearProducto')
+    },
+    editarProducto: function(req,res){
+        res.render('./vendedores/editarProducto')
     }
+
+
 }
 
 module.exports = controller

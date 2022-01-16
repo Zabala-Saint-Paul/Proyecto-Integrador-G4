@@ -17,6 +17,8 @@ const router = express.Router();
 router.get('/', productsController.index)
 router.get('/productCart', productsController.productCart)
 router.get('/productDetail', productsController.productDetail)
+router.get('/crearProducto', productsController.crearProducto)
+router.get('/editarProducto', productsController.editarProducto)
 
 
 //Exportamos el metodo de transaccion definido para ser utilizado
