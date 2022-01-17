@@ -68,6 +68,7 @@ app.use(express.static(path.resolve(__dirname, '..','./views')));
 //Para que funcione ejs
 app.set('view engine', 'ejs')
 
+
 //Para levantar servidor con heroku
 app.listen(process.env.PORT || 420, function(){
     console.log('Servidor corriendo en el puerto 420')
