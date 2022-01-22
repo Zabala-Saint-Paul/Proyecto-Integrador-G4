@@ -34,7 +34,7 @@ router.get('/', productsController.index)
 router.post('/', productsController.storeProduct)
 router.get('/productCart', productsController.productCart)
 router.get('/productDetail', productsController.productDetail)
-router.get('/crearProducto', productsController.crearProducto)
+router.get('/crearProducto',uploadFile.single('image'), productsController.crearProducto)
 router.get('/editarProducto', productsController.editarProducto)
 
 
