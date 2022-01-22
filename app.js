@@ -39,10 +39,7 @@ app.listen(420, function(){
 //Importamos express, path y router
 
 const express = require('express');
-
 const path = require('path');
-
-
 
 //Importo el de Routes el enrutador del index en este caso mi pantalla principal
 const productsRoute = require('./src/routes/productsRoute');
@@ -51,11 +48,9 @@ const usersRoute = require('./src/routes/usersRoute');
 //Defino app para usar las funciones de express
 const app = express();
 
-//Defino app.use para mostrar la pantalla Index a traves del Routes / Enrutador que se importa arriba.
-
-app.use('/', productsRoute)
-app.use('/users', usersRoute)
-
+//Necesario para guardar informacion en los JSON
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 //Para parasrse en carpeta public
 
@@ -69,3 +64,8 @@ app.set('view engine', 'ejs')
 app.listen(process.env.PORT || 420, function(){
     console.log('Servidor corriendo en el puerto 420')
 })
+
+//Defino app.use para mostrar la pantalla Index a traves del Routes / Enrutador que se importa arriba.
+
+app.use('/', productsRoute)
+app.use('/users', usersRoute)
