@@ -31,7 +31,7 @@ const router = express.Router();
 //El segundo parametro utilizamos el controlador concatenado con el elemento a usar.
 
 router.get('/', productsController.index)
-router.post('/', productsController.storeProduct)
+router.post('/', uploadFile.single('image'), productsController.storeProduct)
 router.get('/productCart', productsController.productCart)
 router.get('/productDetail', productsController.productDetail)
 router.get('/crearProducto', productsController.crearProducto)
