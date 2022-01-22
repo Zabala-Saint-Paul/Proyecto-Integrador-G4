@@ -59,7 +59,7 @@ app.use('/users', usersRoute)
 
 //Para parasrse en carpeta public
 
-app.use(express.static(path.resolve(__dirname, '..','./public')));
+app.use(express.static(path.resolve(__dirname,'./public')));
 
 
 
