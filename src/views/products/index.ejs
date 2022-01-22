@@ -120,6 +120,14 @@
             </div>
 
           </div>
+          <% productsList.forEach(oneProduct => { %>
+            <div>
+              <h4><%= oneProduct.name %> </h4>
+              <img src="/images/<%= oneProduct.image %>" class="pdt-image">
+              <p><strong>Price:</strong> $ <%= oneProduct.price %> </p>
+              <p><%= oneProduct.description %></p>
+            </div>
+            <% }) %>
         </main>
         
        

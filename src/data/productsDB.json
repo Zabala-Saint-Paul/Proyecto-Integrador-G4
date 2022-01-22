@@ -1,0 +1,43 @@
+[
+ {
+  "id": 1,
+  "name": "Marte",
+  "price": "100000000",
+  "description": "Viaje a marte nos lleva elon musk",
+  "image": "FALTA IMAGEN"
+ },
+ {
+  "id": 2,
+  "name": "Luna",
+  "price": "10000009",
+  "description": "viaje a la luna",
+  "image": "1-product.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Pluton",
+  "price": "10000000000000000000000",
+  "description": "viaje a pluton",
+  "image": "2-product.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Saturno",
+  "price": "10000000000000000",
+  "description": "viaje a saturno",
+  "image": "FALTA IMAGEN"
+ },
+ {
+  "id": 3,
+  "name": "Estratosfera",
+  "price": "10000000000000",
+  "description": "paseo como menem",
+  "image": "3-product.jpg"
+ },
+ {
+  "id": 4,
+  "name": "asdf",
+  "price": "adsf",
+  "description": "adsf"
+ }
+]
