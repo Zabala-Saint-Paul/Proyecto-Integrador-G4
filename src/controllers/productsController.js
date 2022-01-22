@@ -42,7 +42,7 @@ const controller = {
             name: req.body.name,
             price: req.body.price,
             description: req.body.description,
-            image: req.file.fileName,
+            image: req.file.filename,
         }
 
         dbProducts.push(newProduct)
