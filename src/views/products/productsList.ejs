@@ -2,16 +2,13 @@
 <html lang="en">
 <%- include('./../partials/head') %> 
 <body>
-	<hr>
-	<h1>Listado de productos</h1>
-	<hr>
 	<% productsList.forEach(oneProduct => { %>
-	<div>
-		<h4><%= oneProduct.name %> </h4>
-		<img src="/uploads/<%= oneProduct.image %>" class="pdt-image">
-		<p><strong>Price:</strong> $ <%= oneProduct.price %> </p>
-		<p><%= oneProduct.description %></p>
-	</div>
-	<% }) %>
+		<div>
+		  <h4><%= oneProduct.name %> </h4>
+		  <img src="/images/<%= oneProduct.image %>" class="pdt-image">
+		  <p><strong>Price:</strong> $ <%= oneProduct.price %> </p>
+		  <p><%= oneProduct.description %></p>
+		</div>
+		<% }) %>
 </body>
 </html>

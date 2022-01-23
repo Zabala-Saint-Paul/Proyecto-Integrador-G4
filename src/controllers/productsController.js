@@ -24,6 +24,11 @@ const controller = {
     productDetail: function(req, res){
         res.render('./products/productDetail')
     },
+    productsList: (req,res)=>{
+        res.render('./products/productsList',{
+            productsList: dbProducts
+        })
+    },
     crearProducto: function(req,res){
         res.render('./vendedores/crearProducto')
     },
