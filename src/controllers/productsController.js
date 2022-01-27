@@ -15,14 +15,27 @@ const dbProducts = JSON.parse(fs.readFileSync(dbProductsJSON, 'utf8'));
 const controller = {
     index: function(req, res){
         res.render('./products/index', {
-            productsList: dbProducts
+            p: dbProducts
         });
     },
     productCart: function(req, res){
         res.render('./products/productCart')
     },
+
     productDetail: function(req, res){
-        res.render('./products/productDetail')
+        let idProductoSeleccionado = req.params.id;
+		let productoSeleccionado;
+
+		for (let p of dbProducts){
+
+			if(p.id==idProductoSeleccionado){
+				productoSeleccionado=p;
+				break;
+			}
+		}
+
+		
+        res.render('./products/productDetail',{products:productoSeleccionado})
     },
     productsList: (req,res)=>{
         res.render('./products/productsList',{

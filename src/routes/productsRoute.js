@@ -31,12 +31,24 @@ const router = express.Router();
 //El segundo parametro utilizamos el controlador concatenado con el elemento a usar.
 
 router.get('/', productsController.index)
-router.post('/', uploadFile.single('image'), productsController.storeProduct)
+
+
+
 router.get('/productCart', productsController.productCart)
-router.get('/productDetail', productsController.productDetail)
+
+//DETALLE DE UN PRODUCTO
+
+router.get('/productDetail/:id', productsController.productDetail)
+
 router.get('/productsList', productsController.productsList)
-router.get('/crearProducto',uploadFile.single('image'), productsController.crearProducto)
-router.get('/editarProducto', productsController.editarProducto)
+//CREAR PRODUCTO//
+router.get('/crearProducto', productsController.crearProducto)
+router.post('/', uploadFile.single('image'), productsController.storeProduct)
+//router.post('/crearProducto',uploadFile.single('image'), productsController.crearProducto)
+
+//EDITAR PRODUCTO
+
+router.get('/edit/:id', productsController.editarProducto)
 
 
 //Exportamos el metodo de transaccion definido para ser utilizado

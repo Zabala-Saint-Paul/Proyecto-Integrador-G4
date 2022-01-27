@@ -53,5 +53,12 @@
   "price": "213213",
   "description": "fdsafdsa",
   "image": "1642869573737.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Perro",
+  "price": "300",
+  "description": "fdsafdsafsa",
+  "image": "1643246977361.jpg"
  }
 ]

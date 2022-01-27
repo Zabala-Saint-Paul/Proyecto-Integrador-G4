@@ -58,7 +58,13 @@
                 </ul>
             </div>
             
-                           
+            <h1><%=products.id%></h1>
+            <h1><%=products.name%></h1>
+            <h1><%=products.price%></h1>
+            <h1><%=products.description%></h1>
+            <img src="/images/<%= products.image %>" alt="product image" class="product-detail-img">
+            <a href="/edit/<%= products.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+                  
 
     
         </main>

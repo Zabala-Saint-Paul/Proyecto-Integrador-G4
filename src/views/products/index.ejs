@@ -18,7 +18,7 @@
 
           <p class="titulo-paquetes">Paquetes</p>
           <div class="group-paquetes"> <!-- flex de paqutes -->
-            <a class="url-descripcion-paquetito" href="/productDetail" >
+            <a class="url-descripcion-paquetito" href="/productDetail/1" >
             <div class="paquetito"> 
               
               <i class="fas fa-space-shuttle logo-paquetito"></i>
@@ -26,7 +26,7 @@
 
             </div>
             </a>
-            <a class="url-descripcion-paquetito" href="/productDetail" >
+            <a class="url-descripcion-paquetito" href="/productDetail/1" >
             <div class="paquetito">
               
               <i class="fas fa-globe logo-paquetito"></i>
@@ -34,7 +34,7 @@
 
             </div>
             </a>
-            <a class="url-descripcion-paquetito" href="/productDetail" >
+            <a class="url-descripcion-paquetito" href="/productDetail/1" >
             <div class="paquetito"> 
               
               <i class="fas fa-rocket logo-paquetito"></i>
@@ -120,14 +120,23 @@
             </div>
 
           </div>
-          <% productsList.forEach(oneProduct => { %>
-            <div>
-              <h4><%= oneProduct.name %> </h4>
-              <img src="/images/<%= oneProduct.image %>" class="pdt-image">
-              <p><strong>Price:</strong> $ <%= oneProduct.price %> </p>
-              <p><%= oneProduct.description %></p>
-            </div>
-            <% }) %>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <% for (let i=0;i<p.length;i++) { %>
+            
+              <a href="/productDetail/<%=p[i].id%>">
+                
+                 
+               
+                
+                  <p><%=p[i].price%></p>
+                  <p><%=p[i].description%></p>
+                  <p><%=p[i].name%></p>
+                  <img src="/images/<%=p[i].image%>" alt="imagen de producto">
+                
+              </a>
+           
+            <% } %>
+          </div>
         </main>
         
        
