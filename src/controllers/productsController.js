@@ -2,10 +2,10 @@
 const path = require('path');
 const fs = require('fs');
 
-//Trear base de datos en formato JSON
+//Traer base de datos en formato JSON
 const dbProductsJSON = path.resolve(__dirname, '../data/productsDB.json');
 
-//transformar en objeto literal
+//transformar en objeto literal, ACA TENEMOS UN ARRAY DE OBJETOS
 const dbProducts = JSON.parse(fs.readFileSync(dbProductsJSON, 'utf8'));
 
 // En controllers tengo los controladores
@@ -71,6 +71,9 @@ const controller = {
 
     },
     editarProducto: function(req,res){
+
+
+        
         res.render('./vendedores/editarProducto')
     }
 
