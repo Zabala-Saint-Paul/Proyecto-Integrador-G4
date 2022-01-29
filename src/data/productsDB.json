@@ -21,44 +21,10 @@
   "image": "2-product.jpg"
  },
  {
-  "id": 4,
-  "name": "Saturno",
-  "price": "10000000000000000",
-  "description": "viaje a saturno",
-  "image": "FALTA IMAGEN"
- },
- {
   "id": 3,
   "name": "Estratosfera",
   "price": "10000000000000",
   "description": "paseo como menem",
   "image": "3-product.jpg"
- },
- {
-  "id": 4,
-  "name": "asdf",
-  "price": "adsf",
-  "description": "adsf"
- },
- {
-  "id": 5,
-  "name": "adsf",
-  "price": "asdf",
-  "description": "asdf",
-  "image": "1642817771003.jpg"
- },
- {
-  "id": 6,
-  "name": "Darwin",
-  "price": "213213",
-  "description": "fdsafdsa",
-  "image": "1642869573737.jpg"
- },
- {
-  "id": 7,
-  "name": "Perro",
-  "price": "300",
-  "description": "fdsafdsafsa",
-  "image": "1643246977361.jpg"
  }
 ]
