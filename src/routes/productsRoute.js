@@ -10,6 +10,9 @@ const multer = require('multer');
 const path = require('path');
 
 
+//Creamos la constante router para utilizar express.Router()
+const router = express.Router();
+
 
 const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
@@ -23,8 +26,6 @@ const multerDiskStorage = multer.diskStorage({
 
 const uploadFile = multer({ storage: multerDiskStorage });
 
-//Creamos la constante router para utilizar express.Router()
-const router = express.Router();
 
 //Utilizamos el metodo de transaccion .get para procesar la vista index
 //El primer parametro muestra la ruta definida (en este caso el home por eso solo la barra)
@@ -49,6 +50,11 @@ router.post('/', uploadFile.single('image'), productsController.storeProduct)
 //EDITAR PRODUCTO
 
 router.get('/edit/:id', productsController.editarProducto)
+
+
+// ELIMINAR PRODUCTO
+
+router.delete('/delete/:id', productsController.destroy); 
 
 
 //Exportamos el metodo de transaccion definido para ser utilizado

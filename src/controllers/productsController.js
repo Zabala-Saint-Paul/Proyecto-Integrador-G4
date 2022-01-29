@@ -5,8 +5,13 @@ const fs = require('fs');
 //Trear base de datos en formato JSON
 const dbProductsJSON = path.resolve(__dirname, '../data/productsDB.json');
 
-//transformar en objeto literal
+//transformar en objeto literal// Array de objetos literales
 const dbProducts = JSON.parse(fs.readFileSync(dbProductsJSON, 'utf8'));
+
+//Para formar el Unlink o unlikSync//
+// Se guarda en la variable images el path donde estan las imagenes de los productos//
+
+const images = path.join(__dirname, '../../public/images/products');
 
 // En controllers tengo los controladores
 // En este caso le indico que index va a renderizar la pantalla index, con el nombre de la view ya alcanza,
@@ -70,10 +75,48 @@ const controller = {
         return res.redirect('/'); 
 
     },
+   // Delete - Borrar un producto de la base de datos .json
+	destroy : (req, res) => {
+
+		//Obtengo el id del objeto que quiero eliminar
+        let idProductoSeleccionado = req.params.id;
+
+        // en esta variable filtramos de la base de datos todos los productos que son distintos
+        //al producto que se quiere eliminar
+
+		let products2 = dbProducts.filter(function(element){
+			return element.id!=idProductoSeleccionado;
+		})
+
+        //Para eliminiarla imagen del producto
+
+        let products1 = dbProducts.filter(function(element){
+            return element.id==idProductoSeleccionado;
+        })
+
+       // Esta linea sirve para elimar la imagen del producto de la base de datos
+
+        fs.unlink(path.join(images,products1[0].image ),(err) => {if (err) console.log(err)})
+
+        //dbProductsJSON es la base de datos en formato Json
+        //JSON.stringify transforma en json el array de objetos products2
+        //Fs.writeFileSync sobre escribe el arhivo json dbProductsJason
+
+		fs.writeFileSync(dbProductsJSON, JSON.stringify(products2,null,' '));
+
+	    res.redirect('/');
+
+
+	},
+   
     editarProducto: function(req,res){
         res.render('./vendedores/editarProducto')
     }
+    
 
+
+
+    
 
 }
 

@@ -15,7 +15,10 @@
 	  <!-- HEADER -->
         
         
-        <main>
+        
+    <main>
+      
+	  <!-- HEADER 
           <br>
           <br>
             
@@ -57,6 +60,7 @@
                     <li><button type="button" class="btn btn-primary btn-lg">Contratar</button></li>
                 </ul>
             </div>
+            -->
             
             <h1><%=products.id%></h1>
             <h1><%=products.name%></h1>
@@ -64,6 +68,16 @@
             <h1><%=products.description%></h1>
             <img src="/images/<%= products.image %>" alt="product image" class="product-detail-img">
             <a href="/edit/<%= products.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+
+            <form action="/delete/<%= products.id %>?_method=DELETE" method="POST" >
+							<button type="submit" >ELIMINAR</button>
+						</form>
+          </article>
+				</div>
+			</div>
+		</div>
+	</div>
+		
                   
 
     
