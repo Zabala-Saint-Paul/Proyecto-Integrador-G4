@@ -1,74 +1,80 @@
 
 <html >
-<!-- HEAD-->
-
-<%- include('./../partials/head') %> 
-
-<!-- HEAD -->
-<body>
-	 <!-- HEADER-->
-
-	 <%- include('./../partials/header') %> 
-
-	 <!-- HEADER -->
-    <!-- DIV PRINCIPAL -->
-	<div>
-
-        <!-- DIV titulo -->
-		<div class="row">
-			<div class="col-12">
-				<h2 >Estás editando: <i>Viaje a Marte</i></h2>
-			</div>
-		</div>
-        <!-- DIV del Formulario Completo-->
-		<div class="col-12">
-
-			<form  method="POST">
-        <!-- DIV que contiene todo el forms -->
-				<div class="row">
-                    <!-- DIV por cada elemento que compone el forms -->
-					<div class="col-12 col-md-6">
-						<label for="name" class="form-label">Nombre del producto: </label>
-						<input type="text" id="name" name="name"  class="form-input">
-					</div>
-                    <!-- DIV por cada elemento que compone el forms -->
-					<div class="col-12 col-md-6">
-						<label for="price" class="form-label">Precio del producto: </label>
-						<input type="text" id="price" name="price"   class="form-input">
-					</div>
-                    <!-- DIV por cada elemento que compone el forms -->
-					<div class="col-12 col-md-6">
-						<label for="discount" class="form-label">Descuento:</label>
-						<input type="text" id="discount" name="discount"  class="form-input">
-					</div>
-                    <!-- DIV por cada elemento que compone el forms -->
-					<div class="col-12 col-md-6">
-						<label for="category" class="form-label">Categoría:</label>
-						<select name="category" id="category" class="form-input">
-							<option value="">Elegí</option>
-							<option value="in-sale">En oferta</option>
-							<option value="visited" >Últimos agregados</option>
-						</select>
-					</div>
-                    <!-- DIV por cada elemento que compone el forms -->
-					<div class="col-12">
-						<label for="description" class="form-label">Descipción:</label>
-						<textarea name="description" id="description" class="form-input"></textarea>
-					</div>
-                    <!-- DIV por cada elemento que compone el forms -->
-					<div class="col-12">
-						<button type="submit" class="buy-now-button">Guardar producto</button>
-					</div>
-				</div>
-			</form>
-		</div>
-
-	</div>
+	<!-- HEAD-->
 	
-</body>	
-<!-- FOOTER -->
-
-<%- include('./../partials/footer') %>
-
-<!-- FOOTER -->
-</html>
+	<%- include('./../partials/head') %> 
+	
+	<!-- HEAD -->
+	<body>
+		 <!-- HEADER-->
+	
+		 <%- include('./../partials/header') %> 
+	
+		 <!-- HEADER -->
+		<!-- DIV PRINCIPAL -->
+	<main>
+		<div>
+	
+			<!-- DIV titulo -->
+			<div>
+				<div class="divCrear" >
+					
+					<h2 id="login" >Editando: <%= products.name %> </h2> 
+				</div>
+			</div>
+			<!-- DIV del Formulario Completo-->
+			<div class="formEdit" >
+	
+				<form  action="/edit/<%=products.id%>?_method=PUT"  method="post" >
+			<!-- DIV que contiene todo el forms -->
+					<div >
+						<!-- DIV por cada elemento que compone el forms -->
+						<div class="div_hijo" >
+							<label  for="name" >Nombre del producto: </label>
+							<input class="input1" type="text" id="name" name="name" placeholder="<%= products.name %>" value="<%= products.name %>"  >
+						</div>
+						<!-- DIV por cada elemento que compone el forms -->
+						<div class="div_hijo" >
+							<label  for="price" >Precio del producto: </label>
+							<input class="input1" type="text" id="price" name="price" placeholder="$<%= products.price %>" value="$<%= products.price %>" >
+						</div>
+						
+						<!-- DIV por cada elemento que compone el forms -->
+						<div class="div_hijo">
+							<label  for="category" >Categoría:</label>
+							<select class="input1" name="category" id="category" >
+								<option value="">Elegí</option>
+								<option value="in-sale">Geoespacio</option>
+								<option value="visited">Espacio lunar</option>
+								<option value="visited">Medio interplanetario</option>
+								<option value="visited">Medio interestelar</option>
+							</select>
+						</div>
+						<!-- DIV por cada elemento que compone el forms -->
+						<div class="div_hijo">
+							<label  for="description" >Descipción:</label>
+							<textarea class="input1"  name="description" id="description" placeholder="<%= products.description %>" value="<%= products.description %>" ></textarea>
+						</div>
+						<div class="div_botonHijos" >
+							<input class="input1" type="file" name="image"></input>
+						<!-- DIV por cada elemento que compone el forms -->
+						<br>
+						<br>
+						<div >
+							<!--<button type="submit" class="buy-now-button">Guardar producto</button>-->
+							<button type="submit" class="btn btn-primary">Guardar producto</button>
+						</div>
+					</div>
+				</form>
+			</div>
+	
+		</div>
+		<br>
+	</main>
+	</body>	
+	<!-- FOOTER -->
+	
+	<%- include('./../partials/footer') %>
+	
+	<!-- FOOTER -->
+	</html>

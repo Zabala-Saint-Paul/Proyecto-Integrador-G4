@@ -1,0 +1,58 @@
+.divCrear{
+    padding-top: 1em;
+    
+}
+.formEdit{
+    display: flex;
+    justify-content: space-around;
+}
+.div_hijo{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.input1{
+    width: 23em;
+}
+
+.div_botonHijos{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   padding-top: 20px;
+  
+}
+
+/*================================MEDIDAS PARA CELULARES==========================================================*/
+
+
+@media only screen and (max-width:480px) {
+    .divCrear{
+        padding-top: 1em;
+        
+    }
+    .formEdit{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    .div_hijo{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .input1{
+        width: 15em;
+    }
+    
+    .div_botonHijos{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+       align-items: center;
+       padding-top: 20px;
+      
+    }
+}

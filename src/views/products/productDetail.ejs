@@ -16,18 +16,17 @@
         
         
         
-    <main>
-      
-	  <!-- HEADER 
-          <br>
-          <br>
-            
+  <main>
+  <div class="divTitu">
+	      <h2><%=products.name%></h2>
+        <h3><%=products.description%></h3>
+      </div>      
             <div class="two-column-product">
                 <ul id="ulImagenes"> 
                     <li> <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img class="d-block w-100" src="images/1-product.jpg" alt="First slide">
+                            <img class="d-block w-100" src="/images/<%= products.image %>" alt="First slide">
                           </div>
                           <div class="carousel-item">
                             <img class="d-block w-100" src="images/2-product.jpg" alt="Second slide">
@@ -49,20 +48,26 @@
                 </ul>
 
                 <ul class="column-right-side">
-                     <li class="precio"> USD 100.000</li>
-                     <li> Selecciona la fecha</li>
-                     <li> <input type="date" placeholder="Seleccionar Fecha"></li>
-                     <li> Contactate, conocé los mejores paquetes  pensados ​​para vos .</li>
+                    <li class="precio"> <%=products.price%></li>
+                    <li> Selecciona la fecha</li>
+                    <li> <input type="date" placeholder="Seleccionar Fecha"></li>
+                    <li> Contactate, conocé los mejores paquetes  pensados ​​para vos .</li>
                     <li> <i class="fas fa-credit-card"></i>Pagá en hasta 12 cuotas</li>
-                    <li><i class="fab fa-cc-visa"></i><i class="fab fa-cc-paypal"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-amex"></i></li>
+                    <li><i class="fab fa-cc-visa fa-2x"></i><i class="fab fa-cc-paypal fa-2x"></i><i class="fab fa-cc-mastercard fa-2x"></i><i class="fab fa-cc-amex fa-2x"></i></li>
                     <li><a href="#">Mas informacion</a></li>
                     <li><button type="button" class="btn btn-primary btn-lg">Proximos Vuelos</button></li>
-                    <li><button type="button" class="btn btn-primary btn-lg">Contratar</button></li>
+                    <li><button type="button" class="btn btn-primary btn-lg"> Contratar </button></li>
+                    <div class="btEliminar">  
+                      <li><button type="button" class="btn btn-primary btn-lg"> <a class="editProduc" href="/edit/<%= products.id %>" class="action-button edit">Editar</a></button></li>
+                      <form  action="/delete/<%= products.id %>?_method=DELETE" method="POST" >
+                        <button class="btn btn-primary btn-lg" type="submit" >Eliminar</button>
+                      </form>
+                    </div>
                 </ul>
             </div>
-            -->
             
-            <h1><%=products.id%></h1>
+            
+           <!--  <h1><%=products.id%></h1>
             <h1><%=products.name%></h1>
             <h1><%=products.price%></h1>
             <h1><%=products.description%></h1>
@@ -76,7 +81,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 		
                   
 

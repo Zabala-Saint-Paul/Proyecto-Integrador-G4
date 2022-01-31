@@ -1,5 +1,10 @@
 
 /* productDetail */
+.divTitu{
+  padding-top: 8.3em;
+  padding-left: 30px;
+}
+
 .titulo-vivi{
   
   margin-left: 200px;
@@ -32,47 +37,150 @@
 
 .precio{
   font-size: 30px;
-  color:rgba(235, 42, 8, 0.856)
+  color: green
+}
+
+.editProduc{
+  text-decoration: none;
+  color: white;
+}
+.btEliminar{
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
 }
 
 /*================================MEDIDAS PARA CELULARES==========================================================*/
 
 @media only screen and (max-width:480px) {
 
-.two-column-product{
+  .divTitu{
+    padding-top: 13em;
+    padding-left: 30px;
+  }
   
- display: flex;
- background-color: rgb(217, 223, 223);
- justify-content: center;
- flex-wrap: wrap;
- margin-top: 0px;
+  .titulo-vivi{
+    
+    margin-left: 200px;
+   
+    background-color: rgb(217, 223, 223);
+      
+    font-weight: 400;
+  }
   
+  
+  .two-column-product{
+    display: flex;
+    background-color: rgb(217, 223, 223);
+   justify-content: space-evenly;
+  }
+  
+  .two-column-product ul li {
+    list-style: none;
+  }
+  
+  .two-column-product img {
+    width: 300px;
+    height: 300px;
+  }
+  
+  
+  .column-right-side li{
+    margin: 10px;
+  }
+  
+  .precio{
+    font-size: 30px;
+    color: green
+  }
+  
+  .editProduc{
+    text-decoration: none;
+    color: white;
+  }
+  .btEliminar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+}
+/*-------------------Lista de Productos-------------------------------*/
+.divPrincipal{
+  padding-top: 9em;
 }
 
-.two-column-product ul li {
-  list-style: none;
-  text-align: center;
+
+.divProductos{
+  display: flex;
+  margin: 5px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.column-right-side{
-  padding-left: 0%;
+.divtitulos{
+  display: flex;
+  font-size: 50px;
+  font: bold;
+  
+
 }
 
-#ulImagenes{
-  padding-left: 0%;
+.divPrice{
+  font-size: 25px;
+  color: green;
+  
+
 }
 
-.two-column-product img {
-  width: 200px;
-  height: 200px;
+.divDescrip{
+  font-size: 25px;
+  font: bold;
 }
+.imagLista{
+  width: 600px;
+  height: 300px;
+}
+/*================================MEDIDAS PARA CELULARES==========================================================*/
+/*-------------------Lista de Productos-------------------------------*/
 
-.column-right-side li{
-  margin: 10px;
-}
-
-.precio{
-  font-size: 30px;
-  color:rgba(235, 42, 8, 0.856)
-}
+@media only screen and (max-width:480px) {
+  .divPrincipal{
+    padding-top: 12em;
+  }
+  
+  
+  .divProductos{
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .divtitulos{
+    display: flex;
+    font-size: 30px;
+    font: bold;
+    
+  
+  }
+  
+  .divPrice{
+    font-size: 18px;
+    color: green;
+    
+  
+  }
+  
+  .divDescrip{
+    font-size: 18px;
+    font: bold;
+  }
+  .imagLista{
+    width: 90%;
+    height: 70%;
+    display: block;
+    justify-content: center;
+  }
 }

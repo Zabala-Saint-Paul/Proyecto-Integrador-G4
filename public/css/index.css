@@ -1,5 +1,9 @@
 /*Sección Imagenes*/
 
+main{
+  height: auto;
+}
+
 .group-imagenes-padre{
   display: flex;
   flex-wrap: wrap;
@@ -27,8 +31,16 @@
   font-size: 18px;
   font-weight: bold;
   color: #6127D0;
+  padding-top: 8em;
 }
 
+.titulo-paquetes2{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #6127D0;
+  padding-top: 2em;
+}
 .descripcion-sitio{
   text-align: center;
   font-size: 15px;
@@ -65,6 +77,10 @@
 @media only screen and (max-width:480px) {
 
 /*Sección paquetes celulares*/
+main{
+  height: auto;
+
+}
 
 .group-paquetes{
   display: flex;
@@ -76,6 +92,7 @@
   font-size: 18px;
   font-weight: bold;
   color: #6127D0; 
+  padding: 5em;
 }
 
 .descripcion-sitio{
@@ -119,3 +136,67 @@
   margin: 20px;
 }
 }
+/*================MEDIDA PARA TABLETAS================*/
+
+@media only screen and (max-width:768px ) {
+
+  /*Sección paquetes celulares*/
+  main{
+    height: auto;
+  
+  }
+  
+  .group-paquetes{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .titulo-paquetes{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #6127D0; 
+    
+  }
+  
+  .descripcion-sitio{
+    text-align: center;
+    font-size: 15px;
+    width: 90%;
+    color: #6127D0;
+  }
+  
+  .paquetito{
+    text-align: center;
+  }
+  
+  .descripcion-paquetito{
+    font-size: 14px;
+    text-align: center;
+    color: #6127D0;
+    font-weight: bold;
+  }
+  
+  .logo-paquetito{
+    font-size: 35px;
+    color: #6127D0;
+  }
+  
+  /*Sección Imagenes celulares*/
+  
+  .group-imagenes-padre{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .group-imagenes-hijo{
+    align-items: center;
+  }
+  
+  .imagen-hijo{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+  }
+  }

@@ -16,16 +16,24 @@
 <html lang="en">
 <%- include('./../partials/head') %> 
 <body>
-	<% productsList.forEach(oneProduct => { %>
-		<div>
-		  <h4><%= oneProduct.name %> </h4>
-		  <img src="/images/<%= oneProduct.image %>" class="pdt-image">
-		  <p><strong>Price:</strong> $ <%= oneProduct.price %> </p>
-		  <p><%= oneProduct.description %></p>
+	<main>
+		<div class="divPrincipal">
+
+			<% productsList.forEach(oneProduct => { %>
+			<div class="divProductos">
+		  		<h4 class="divtitulos" ><%= oneProduct.name %> </h4>
+		  		<p class="divPrice"><strong>Price:</strong> $ <%= oneProduct.price %> </p>
+		  		<p class="divDescrip"><%= oneProduct.description %></p>
+		  		<div>
+		 	 		<img class="imagLista" src="/images/<%= oneProduct.image %>" class="pdt-image">
+				</div>
+			</div>  
 		 
 		  
 		</div>
 		<% }) %>
+		<br>
+	</main>
 </body>
  <!-- FOOTER -->
 

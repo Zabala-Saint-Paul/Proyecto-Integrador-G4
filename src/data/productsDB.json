@@ -4,7 +4,7 @@
   "name": "Marte",
   "price": "100000000",
   "description": "Viaje a marte nos lleva elon musk",
-  "image": "FALTA IMAGEN"
+  "image": "imagen (1).jpg"
  },
  {
   "id": 2,
@@ -21,7 +21,14 @@
   "image": "2-product.jpg"
  },
  {
-  "id": 3,
+    "id": 4,
+    "name": "Saturno",
+    "price": "10000000000000000000000",
+    "description": "viaje a Saturno",
+    "image": "2-product.jpg"
+   },
+ {
+  "id": 5,
   "name": "Estratosfera",
   "price": "10000000000000",
   "description": "paseo como menem",

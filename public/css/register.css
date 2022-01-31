@@ -1,5 +1,5 @@
 #crearCuenta{
-  padding-top: 1em;
+  padding-top: 3.5em;
   justify-content: space-evenly;
   display: flex;
   margin-left: 0%;
@@ -40,4 +40,52 @@
   background-color: rgb(217, 223, 223);
   justify-content: center ;
   padding-left: 0%;
+}
+
+/*================MEDIDA PARA CELULARES================*/
+
+@media only screen and (max-width:480px){
+  #crearCuenta{
+    padding-top: 7.5em;
+    justify-content: space-evenly;
+    display: flex;
+    margin-left: 0%;
+  }
+  
+  #crear{
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+  }
+  
+  .liReg{
+    padding-top: 1em;       
+  }
+  
+  .liReg input{
+    width: 18em;
+  }
+  
+  #ulReg{
+    list-style: none;       
+    padding-left: 0em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #tenesCuenta{
+    color: rgba(0, 0, 0, 0.48);
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 0em;
+    margin-top: 0em;
+    margin-right: 0em;
+  }
+  
+  .regForm{
+    display: flex;
+    background-color: rgb(217, 223, 223);
+    justify-content: center ;
+    padding-left: 0%;
+  }
 }

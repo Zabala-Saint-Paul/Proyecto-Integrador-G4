@@ -76,6 +76,42 @@ const controller = {
         return res.redirect('/'); 
 
     },
+    editarProducto: function(req,res){
+        let idProductoSeleccionado = req.params.id;
+		let productoSeleccionado;
+
+		for (let p of dbProducts){
+
+			if(p.id==idProductoSeleccionado){
+				productoSeleccionado=p;
+				break;
+			}
+		}
+        
+		
+        res.render('./vendedores/editarProducto',{products:productoSeleccionado})
+    },
+    update: function(req,res){
+
+		let idProductoSeleccionado = req.params.id;
+        let datos = req.body;        
+
+		for (let p of dbProducts){
+			if(p.id == idProductoSeleccionado){
+                console.log(p.id)
+                console.log(p.idProductoSeleccionado)
+				p.name = datos.name;
+				p.price = datos.price;
+				p.image =  req.file.filename;
+				p.description = datos.description;
+				break;
+			}
+		}
+        //EL PRIMER PARAMETRO ES LA BD JSON IMPORTADA, EL SEGUNDO PARAMETRO LO ESTA SOBRE ESCRIBIENDO
+		fs.writeFileSync(dbProductsJSON, JSON.stringify(dbProducts,null,' '));
+
+	    res.redirect('/');
+    },
    // Delete - Borrar un producto de la base de datos .json
 	destroy: (req, res) => {
 
@@ -110,17 +146,13 @@ const controller = {
 
 	},
    
-    editarProducto: function(req,res){
+   
 
-
-        
-        res.render('./vendedores/editarProducto')
-    }
+	
+	
+       
     
 
-
-
-    
 
 }
 
