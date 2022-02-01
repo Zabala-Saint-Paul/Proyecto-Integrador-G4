@@ -15,41 +15,41 @@
 
 	<!-- HEADER -->
 <main >
-
-		<h2  >Formulario de Viajes a Ofrecer</h2>
-		
-		<div>
+	<div class="divCrear">
+		<h2 id="login" >Formulario de Viajes a Ofrecer</h2>
+	</div>
+		<div class="formEdit">
 			<form action = "/" method="POST" enctype="multipart/form-data">
 				<div>
-					<div >
+					<div class="div_hijocrear" >
 						<label for="name" >Nombre del producto:</label>
-						<input type="text" id="name" name="name" placeholder="Ej: VIaje a Marte" >
+						<input class="input1crear" type="text" id="name" name="name" placeholder="Ej: VIaje a Marte" >
 					</div>
-					<div >
+					<div class="div_hijocrear" >
 						<label for="price" >Precio del producto:</label>
-						<input type="text" id="price" name="price" placeholder="Ej: 123000000" >
+						<input class="input1crear" type="text" id="price" name="price" placeholder="Ej: 123000000" >
 					</div>
-					<div >
+					<div class="div_hijocrear" >
 						<label for="discount" >Descuento:</label>
-						<input type="text" id="discount" name="discount" placeholder="Ej: 30" >
+						<input class="input1crear" type="text" id="discount" name="discount" placeholder="Ej: 30" >
 					</div>
-					<div >
+					<div class="div_hijocrear" >
 						<label for="category" >Categoría:</label>
-						<select name="category" id="category" >
+						<select class="input1crear" name="category" id="category" >
 							<option value="">Elegí</option>
 							<option value="in-sale">En oferta</option>
 							<option value="visited">Últimos agregados</option>
 						</select>
 					</div>
-					<div >
+					<div class="div_hijocrear" >
 						<label for="description" >Descripción:</label>
-						<textarea name="description" id="description" ></textarea>
+						<textarea class="input1crear" name="description" id="description" ></textarea>
 					</div>
-					<div>
+					<div class="div_botonHijoscrear">
 						<input type="file" name="image"></input>
 					</div>
-					<div >
-						<button type="submit" >Guardar producto</button>
+					<div class="div_botonHijoscrear" >
+						<button type="submit"  class="btn btn-primary" >Guardar producto</button>
 					</div>
 				</div>
 			</form>

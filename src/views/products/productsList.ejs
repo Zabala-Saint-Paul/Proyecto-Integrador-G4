@@ -22,10 +22,10 @@
 			<% productsList.forEach(oneProduct => { %>
 			<div class="divProductos">
 		  		<h4 class="divtitulos" ><%= oneProduct.name %> </h4>
-		  		<p class="divPrice"><strong>Price:</strong> $ <%= oneProduct.price %> </p>
+		  		<p class="divPrice"><strong>Precio:</strong> <%= oneProduct.price %> </p>
 		  		<p class="divDescrip"><%= oneProduct.description %></p>
 		  		<div>
-		 	 		<img class="imagLista" src="/images/<%= oneProduct.image %>" class="pdt-image">
+		 	 		<a href="/productDetail/<%=oneProduct.id%>"><img class="imagLista" src="/images/<%= oneProduct.image %>" class="pdt-image"></a>
 				</div>
 			</div>  
 		 
