@@ -25,7 +25,7 @@
 			<!-- DIV del Formulario Completo-->
 			<div class="formEdit" >
 	
-				<form  action="/edit/<%=products.id%>?_method=PUT"  method="post" >
+				<form  action="/edit/<%=products.id%>?_method=PUT"  method="post" enctype="multipart/form-data">
 			<!-- DIV que contiene todo el forms -->
 					<div >
 						<!-- DIV por cada elemento que compone el forms -->
@@ -39,7 +39,7 @@
 							<input class="input1" type="text" id="price" name="price" placeholder="$<%= products.price %>" value="$<%= products.price %>" >
 						</div>
 						
-						<!-- DIV por cada elemento que compone el forms -->
+						<!-- DIV por cada elemento que compone el forms 
 						<div class="div_hijo">
 							<label  for="category" >Categoría:</label>
 							<select class="input1" name="category" id="category" >
@@ -49,14 +49,14 @@
 								<option value="visited">Medio interplanetario</option>
 								<option value="visited">Medio interestelar</option>
 							</select>
-						</div>
+						</div>-->
 						<!-- DIV por cada elemento que compone el forms -->
 						<div class="div_hijo">
-							<label  for="description" >Descipción:</label>
-							<textarea class="input1"  name="description" id="description" placeholder="<%= products.description %>" value="<%= products.description %>" ></textarea>
+							<label  for="description" >Descripción:</label>
+							<textarea class="input1"  name="description" id="description" placeholder="<%= products.description %>"  ><%= products.description %></textarea>
 						</div>
 						<div class="div_botonHijos" >
-							<input class="input1" type="file" name="image"></input>
+							<input class="input1" type="file" name="image" ></input>
 						<!-- DIV por cada elemento que compone el forms -->
 						<br>
 						<br>

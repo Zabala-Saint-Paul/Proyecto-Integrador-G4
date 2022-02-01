@@ -94,16 +94,17 @@ const controller = {
     update: function(req,res){
 
 		let idProductoSeleccionado = req.params.id;
-        let datos = req.body;        
+        let datos = req.body;
 
 		for (let p of dbProducts){
+            
 			if(p.id == idProductoSeleccionado){
-                console.log(p.id)
-                console.log(p.idProductoSeleccionado)
-				p.name = datos.name;
+                
+                p.name = datos.name;
 				p.price = datos.price;
-				p.image =  req.file.filename;
-				p.description = datos.description;
+                //Falta solucionar como hacer que si no se sube una imagen nueva el sistema carge la imagen actual.
+                //p.image = req.file.filename;          
+               p.description = datos.description;
 				break;
 			}
 		}

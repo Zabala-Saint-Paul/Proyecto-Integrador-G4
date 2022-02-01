@@ -50,7 +50,7 @@ router.post('/', uploadFile.single('image'), productsController.storeProduct)
 //EDITAR PRODUCTO
 
 router.get('/edit/:id', productsController.editarProducto)
-router.put('/edit/:id', productsController.update)
+router.put('/edit/:id', uploadFile.single('image'),productsController.update)
 
 
 // ELIMINAR PRODUCTO
