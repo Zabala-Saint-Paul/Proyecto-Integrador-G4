@@ -135,7 +135,8 @@ footer{
 }
 
 .rIcono{
-  padding: 3px;
+  padding-right: 5px;
+  font-size: 25px;
 }
 .fin{
   padding: 20px 10px;

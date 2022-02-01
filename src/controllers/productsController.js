@@ -98,15 +98,20 @@ const controller = {
 
 		for (let p of dbProducts){
             
-			if(p.id == idProductoSeleccionado){
-                
+            if(p.id == idProductoSeleccionado && datos.image !=undefined) {
                 p.name = datos.name;
 				p.price = datos.price;
-                //Falta solucionar como hacer que si no se sube una imagen nueva el sistema carge la imagen actual.
                 p.image = req.file.filename;          
-               p.description = datos.description;
+                p.description = datos.description;
 				break;
-			}
+            } else {
+                p.name = datos.name;
+				p.price = datos.price;
+                //Falta solucionar como hacer que si no se sube una imagen nueva el sistema carge la imagen actual.         
+                p.description = datos.description;
+				break;
+
+            }
 		}
         //EL PRIMER PARAMETRO ES LA BD JSON IMPORTADA, EL SEGUNDO PARAMETRO LO ESTA SOBRE ESCRIBIENDO
 		fs.writeFileSync(dbProductsJSON, JSON.stringify(dbProducts,null,' '));
