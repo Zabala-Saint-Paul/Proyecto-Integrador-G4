@@ -103,7 +103,7 @@ const controller = {
                 p.name = datos.name;
 				p.price = datos.price;
                 //Falta solucionar como hacer que si no se sube una imagen nueva el sistema carge la imagen actual.
-                //p.image = req.file.filename;          
+                p.image = req.file.filename;          
                p.description = datos.description;
 				break;
 			}
