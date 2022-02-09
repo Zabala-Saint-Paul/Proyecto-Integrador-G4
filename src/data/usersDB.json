@@ -5,5 +5,12 @@
   "lastName": "asdf",
   "password": "$2a$10$tMLBizI8qRs2a4dFqu15buZ3HoS/XwlRj9/pfh0PAAoVKnRqd.TmK",
   "email": "as@as"
+ },
+ {
+  "id": 2,
+  "firstName": "asdf",
+  "lastName": "adsf",
+  "password": "$2a$10$oL7SsUY8DMs8cJoY4G.N6.FZOWENQqgcjWt7oClGMs3XHJ7Yb9wm.",
+  "email": "as@as"
  }
 ]

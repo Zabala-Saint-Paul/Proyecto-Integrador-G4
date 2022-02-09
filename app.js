@@ -58,26 +58,18 @@ app.set('view engine', 'ejs')
 const productsRoute = require('./src/routes/productsRoute');
 const usersRoute = require('./src/routes/usersRoute');
 
+//Necesario para guardar informacion en los JSON
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 //Defino app.use para mostrar la pantalla Index a traves del Routes / Enrutador que se importa arriba.
 
 app.use('/', productsRoute)
 app.use('/users', usersRoute)
 
-
-
-//Necesario para guardar informacion en los JSON
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-
 //Para parasrse en carpeta public
 
 app.use(express.static(path.resolve(__dirname,'./public')));
-
-
-
-
-
-
 
 //Para levantar servidor con heroku
 app.listen(process.env.PORT || 420, function(){
