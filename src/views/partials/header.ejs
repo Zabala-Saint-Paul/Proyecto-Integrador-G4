@@ -6,6 +6,10 @@
       <nav class = "class1">
           <div>
             <ul class = "listaNav">
+              <% if (locals.isLogged) {%>
+              <li class = li1>
+                  <a class="href" href="/crearProducto">Crear Producto</a>
+              </li>
               <li class = li1>
                 <a>Precios</a>
               </li>
@@ -13,12 +17,21 @@
                 <a class="href" href="/productsList">Productos</a>
               </li>
               <li class = li1>
-                <a class="href" href="/crearProducto">Crear Producto</a>
+                <% } else { %>
+              <li class = li1>
+                <a>Precios</a>
               </li>
               <li class = li1>
+                <a class="href" href="/productsList">Productos</a>
+              </li>
+              <li class = li1>
+               
+              </li>
+                <% } %>
           </div>
           <div>
-            <ul class = "listaNav"></ul>
+            <ul class = "listaNav">
+              <% if (!locals.isLogged) {%>
               <li class = li1>
                 <a class="href" href="/users/register" ><i class="fas fa-address-card rIcono"></i></a>
               </li>
@@ -26,10 +39,12 @@
                 
                 <a class="href" href="/users/login"><i class="far fa-user-lock rIcono "></i></a>
               </li>
+              <% } %>
               <li class = li1>
-                
+                 
                 <a class="href" href="/productCart"><i class="fas fa-cart-arrow-down rIcono"></i></a>
               </li>
+             
             </ul>
           </div>
         </nav>

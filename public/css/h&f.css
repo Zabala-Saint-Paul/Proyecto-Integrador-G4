@@ -10,11 +10,8 @@ header{
   width: 100%;
   height: auto;
   background-color:#6127D0 ;
-  
   position: fixed;
-  
-  
-
+  z-index: 1;
 }
   
 .top-nav-bar{

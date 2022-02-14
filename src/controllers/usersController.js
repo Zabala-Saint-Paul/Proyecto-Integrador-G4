@@ -1,8 +1,11 @@
 //Requires
+const res = require('express/lib/response');
 const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require('express-validator')
+
+
 
 //Trear base de datos en formato JSON
 const dbUsersJSON = path.resolve(__dirname, '../data/usersDB.json');
@@ -10,23 +13,21 @@ const dbUsersJSON = path.resolve(__dirname, '../data/usersDB.json');
 //transformar en objeto literal
 const dbUsers = JSON.parse(fs.readFileSync(dbUsersJSON, 'utf8'));
 
+const User = require('../models/User');
 // En controllers tengo los controladores
 // En este caso le indico que index va a renderizar la pantalla index, con el nombre de la view ya alcanza,
 // Hay que definir la ruta completa para cada ventana (?)
 // Son las acciones que va a realizar mi controlador
 const controller = {
-    login: function(req, res){
-        res.render('./users/login')
-    },
     register: function(req, res){
         res.render('./users/register')
     },
     storeUser: (req, res) => {
+		
 		//Aca defino la variable que guarda los errores del ValidationRules que defini en el enrutador de User
 		const resultValidation = validationResult(req);
-		res.send(resultValidation.mapped())
 		
-	/*	//Aca voy a decir que si hay errores quiero que estos se rendericen en el formulario de registro
+		//Aca voy a decir que si hay errores quiero que estos se rendericen en el formulario de registro
 		if (resultValidation.errors.length > 0){
 			return res.render('./users/register',{
 				//Transformo el array en un objeto literal
@@ -34,9 +35,20 @@ const controller = {
 				oldData: req.body,
 			});
 		}
-		
-/*
 
+		let userInDB = User.findByField('email', req.body.email);
+		
+		if (userInDB){
+			return res.render('./users/register',{
+				//Transformo el array en un objeto literal
+				errors: {
+					email: {
+						msg: 'Este email ya esta registrado'
+					}
+				},
+				oldData: req.body,
+			});
+		}
 
 		const generateID = () => {
 			// 1. Obtenemos el último usuario almacenado en la DB
@@ -58,15 +70,58 @@ const controller = {
             lastName: req.body.lastName,
 			password: bcrypt.hashSync(req.body.password, 10),
 			email: req.body.email,
+			image: req.file.filename,
 		}
 
 		dbUsers.push(newUser);
 
 		fs.writeFileSync(dbUsersJSON, JSON.stringify(dbUsers, null, " "));
 
-		return res.redirect("/users/login"); */
-	}
+		return res.redirect("/users/login");
 		
+	}, 
+	login: function(req, res){
+        res.render('./users/login')
+    },
+	loginProcess: (req,res) =>{
+		let userToLogin = User.findByField('email', req.body.email);
+		if(userToLogin){
+			
+			let isOkThePassword = bcrypt.compareSync(req.body.password,userToLogin.password);
+
+			if(isOkThePassword){
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
+				res.redirect('/users/profile')
+			}
+			return res.render('./users/login', {
+				errors: {
+					email:{
+						msg: 'Las credenciales son invalidas'
+					}
+				}
+			});
+			
+		}
+		
+		return res.render('./users/login', {
+			errors: {
+				email:{
+					msg: 'No se encuentra este email en nuestra base de datos'
+				}
+			}
+		});
+	},
+	profile: function(req, res){
+        res.render('./users/profile', {
+			user: req.session.userLogged,
+		})
+    },
+	logout: (req,res)=>{
+		//Este codigo lo que hace es borrar la informacion de session
+		req.session.destroy();
+		return res.redirect('/')
+	}
 }
 
 
