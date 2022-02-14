@@ -109,13 +109,14 @@ const controller = {
 				p.price = datos.price;
                 //Falta solucionar como hacer que si no se sube una imagen nueva el sistema carge la imagen actual.         
                 p.description = datos.description;
+                
 				break;
 
             }
 		}
         //EL PRIMER PARAMETRO ES LA BD JSON IMPORTADA, EL SEGUNDO PARAMETRO LO ESTA SOBRE ESCRIBIENDO
 		fs.writeFileSync(dbProductsJSON, JSON.stringify(dbProducts,null,' '));
-
+        
 	    res.redirect('/');
     },
    // Delete - Borrar un producto de la base de datos .json

@@ -2,6 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
+const {validationResult} = require('express-validator')
 
 //Trear base de datos en formato JSON
 const dbUsersJSON = path.resolve(__dirname, '../data/usersDB.json');
@@ -21,6 +22,22 @@ const controller = {
         res.render('./users/register')
     },
     storeUser: (req, res) => {
+		//Aca defino la variable que guarda los errores del ValidationRules que defini en el enrutador de User
+		const resultValidation = validationResult(req);
+		res.send(resultValidation.mapped())
+		
+	/*	//Aca voy a decir que si hay errores quiero que estos se rendericen en el formulario de registro
+		if (resultValidation.errors.length > 0){
+			return res.render('./users/register',{
+				//Transformo el array en un objeto literal
+				errors: resultValidation.mapped(),
+				oldData: req.body,
+			});
+		}
+		
+/*
+
+
 		const generateID = () => {
 			// 1. Obtenemos el último usuario almacenado en la DB
 			const lastUser = dbUsers[dbUsers.length - 1];
@@ -47,8 +64,10 @@ const controller = {
 
 		fs.writeFileSync(dbUsersJSON, JSON.stringify(dbUsers, null, " "));
 
-		return res.redirect("/users/login");
-	},
+		return res.redirect("/users/login"); */
+	}
+		
 }
+
 
 module.exports = controller
