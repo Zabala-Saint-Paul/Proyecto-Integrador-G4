@@ -18,15 +18,29 @@
             <h1 id = "login"> Ingresa a tu Cuenta</h1> 
             <br>
             <div class="logi">              
-                <form class="formlogin" action="/login" method="POST">
+                <form class="formlogin" action="/users/login" method="POST">
                     <p>
                       <!-- campo para el usuario -->
-                      <input class="forminput" type="text" placeholder="Usuario" name="usuario" required>
+                      <input  
+                      type="email" 
+                      placeholder="email" 
+                      name="email"
+                      class="form-control  <%= locals.errors && errors.email ? 'is-invalid':null %>">
+                      <% if (locals.errors && errors.email) {%>
+                             
+                        <p style='color:red'><%= errors.email.msg %></p>
+                      
+                      
+                      <%}%>
                     </p>
                    
                     <p>
                       <!-- campo para la contraseña -->
-                      <input class="forminput" type="password" placeholder="Contraseña" name="password" required >
+                      <input
+                      type="password" 
+                      placeholder="Contraseña" 
+                      name="password"
+                      class="form-control  <%= locals.errors && errors.password ? 'is-invalid':null %>" >
                     </p>
                     <p>
                         <button type="submit" class="btn btn-primary">Ingresar</button>

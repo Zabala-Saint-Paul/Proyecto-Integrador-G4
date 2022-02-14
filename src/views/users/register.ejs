@@ -15,21 +15,67 @@
 	  <!-- HEADER -->
         
         <main>
-            <h1 id = "crearCuenta">Crear Cuenta</h1>
-            <form class="regForm" action="/users" method="post">
+            <h1 id = "crearCuenta">Crearr Cuenta</h1>
+            <form class="regForm" action="/users" method="post" enctype="multipart/form-data">
                 <ul id = "ulReg">
                     <li class = "liReg">
-                        <input name="firstName" placeholder="Nombre" required/>
+                        <input class="form-control  <%= locals.errors && errors.firstName ? 'is-invalid':null %>" 
+                        name="firstName" 
+                        placeholder="Nombre" 
+                        value="<%= locals.oldData ? oldData.firstName :null %>"/>
+                        <% if (locals.errors && errors.firstName) {%>
+                             
+                            <p style='color:red'><%= errors.firstName.msg %></p>
+                            
+                            
+                            <%}%>
                     </li>
                     <li class = "liReg">
-                        <input name="lastName" placeholder="Apellido" required/>
+                        <input name="lastName" 
+                        placeholder="Apellido" 
+                        class="form-control  <%= locals.errors && errors.lastName ? 'is-invalid':null %>"
+                        value="<%= locals.oldData ? oldData.lastName :null %>" />
+                        <% if (locals.errors && errors.lastName) {%>
+                             
+                            <p style='color:red'><%= errors.lastName.msg %></p>
+                            
+                            
+                            <%}%>
                     </li>
                     <li class = "liReg">
-                        <input name="email" type="email" placeholder="Correo Electronico" required/>
+                        <input name="email" 
+                        type="email" 
+                        placeholder="Correo Electronico" 
+                        value="<%= locals.oldData ? oldData.email :null %>" 
+                        class="form-control  <%= locals.errors && errors.email ? 'is-invalid':null %>"/>
+                        <% if (locals.errors && errors.email) {%>
+                             
+                            <p style='color:red'><%= errors.email.msg %></p>
+                          
+                          
+                          <%}%>
                     </li>
                     <li class = "liReg">
-                        <input name="password" type="password" placeholder="Contraseña" required/>
+                        <input name="password" 
+                        type="password" 
+                        placeholder="Contraseña" 
+                        class="form-control  <%= locals.errors && errors.password ? 'is-invalid':null %>"/>
+                        <% if (locals.errors && errors.password) {%>
+                             
+                            <p style='color:red'><%= errors.password.msg %></p>
+                          
+                          
+                          <%}%>
                     </li>
+                    <div class="div_botonHijoscrear">
+						<input type="file" name="image"></input>
+                        <% if (locals.errors && errors.image) {%>
+                             
+                            <p style='color:red'><%= errors.image.msg %></p>
+                          
+                          
+                          <%}%>
+					</div>
                     <br>
                     <li>
                         <button id="crear" type="submit" class="btn btn-primary">Crear</button>

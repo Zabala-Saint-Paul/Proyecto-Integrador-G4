@@ -6,14 +6,16 @@
       <nav class = "class1">
           <div>
             <ul class = "listaNav">
+              <% if (locals.isLogged) {%>
+              <li class = li1>
+                  <a class="href" href="/crearProducto">Crear Producto</a>
+              </li>
+                <% } else { %>
               <li class = li1>
                 <a>Precios</a>
               </li>
               <li class = li1>
                 <a class="href" href="/productsList">Productos</a>
-              </li>
-              <li class = li1>
-                <a class="href" href="/crearProducto">Crear Producto</a>
               </li>
               <li class = li1>
           </div>
@@ -30,6 +32,7 @@
                 
                 <a class="href" href="/productCart"><i class="fas fa-cart-arrow-down rIcono"></i></a>
               </li>
+              <% } %>
             </ul>
           </div>
         </nav>
