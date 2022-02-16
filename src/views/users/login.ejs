@@ -15,6 +15,8 @@
 	  <!-- HEADER -->
         
         <main>
+            <br>
+            <br>
             <h1 id = "login"> Ingresa a tu Cuenta</h1> 
             <br>
             <div class="logi">              
@@ -26,12 +28,6 @@
                       placeholder="email" 
                       name="email"
                       class="form-control  <%= locals.errors && errors.email ? 'is-invalid':null %>">
-                      <% if (locals.errors && errors.email) {%>
-                             
-                        <p style='color:red'><%= errors.email.msg %></p>
-                      
-                      
-                      <%}%>
                     </p>
                    
                     <p>
@@ -40,7 +36,13 @@
                       type="password" 
                       placeholder="Contraseña" 
                       name="password"
-                      class="form-control  <%= locals.errors && errors.password ? 'is-invalid':null %>" >
+                      class="form-control  <%= locals.errors && errors.email ? 'is-invalid':null %>" >
+                      <% if (locals.errors && errors.email) {%>
+                             
+                        <p style='color:red'><%= errors.email.msg %></p>
+                      
+                      
+                      <%}%>
                     </p>
                     <p>
                         <button type="submit" class="btn btn-primary">Ingresar</button>
@@ -54,6 +56,7 @@
                     </p>
                 </form>
             </div>
+            <br>
         </main>
         
         

@@ -59,7 +59,7 @@
 					-->
 					<div class="div_hijocrear" >
 						<label for="description" >Descripción:</label>
-						<textarea class="input1crear form-control <%= locals.errors && errors.description ? 'is-invalid':null %>" name="description" id="description" ><%= locals.oldData ? oldData.price :null %></textarea>
+						<textarea class="input1crear form-control <%= locals.errors && errors.description ? 'is-invalid':null %>" name="description" id="description" ><%= locals.oldData ? oldData.description :null %></textarea>
 						<% if (locals.errors && errors.description) {%>
                              
                             <p style='color:red'><%= errors.description.msg %></p>
