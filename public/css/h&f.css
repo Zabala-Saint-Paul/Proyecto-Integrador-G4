@@ -72,13 +72,13 @@ header{
   padding: 14px 16px;
   text-decoration: none;
 }
-  
-.li1 a:hover {
-  background-color: #111;
-}
 
 .href{
   color: #30E3C1 !important;
+}
+
+.href:hover{
+  color: orange !important;
 }
 
 span{
@@ -190,6 +190,7 @@ header{
 .li1 {
   float: right;
   color: #30E3C1;
+  background-color: #30E3C1;
 }
 
 .li1 a {
