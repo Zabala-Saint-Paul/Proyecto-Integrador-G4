@@ -1,19 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Perfil del Usuario</h1>
-    <h2>Bienvenido <%= user.firstName%></h2>
-    <img src="/images/avatars/<%= user.avatar%>" alt="">
+<html>
 
-    <h2><%= user.email %> </h2>
+    <!-- HEAD-->
 
-<center>
-    <a class="dropdown-item" href="/users/logout">Logout</a>
-</body>
+      <%- include('./../partials/head') %> 
+
+      <!-- HEAD -->
+
+    <body>
+
+       <!-- HEADER-->
+
+      <%- include('./../partials/header') %> 
+
+      <!-- HEADER -->
+
+        <main>
+
+            <center>
+
+
+
+
+
+            <div class="perf"></div>
+
+                <h2 id = "login" >Bienvenido <%= user.firstName%></h2>
+                <p>
+                    <a href="/" class="btn btn-primary">Ir al inicio</a>
+                </p>
+
+
+                <img class="imagLista" src="/images/imgUsers/<%= user.image%>" alt="">
+            <br>
+
+            <br>
+            <p>
+                <a class="btn btn-primary" href="/users/logout">Logout</a>
+            </p>
+            <br>
+
+
+            </center>
+        </main>
+    </body>
+
+
+    <!-- FOOTER -->
+
+    <%- include('./../partials/footer') %>
+
+    <!-- FOOTER -->
 </html>

@@ -17,12 +17,13 @@
         
         
   <main>
-  <div class="divTitu">
-	      <h2><%=products.name%></h2>
-        <h3><%=products.description%></h3>
+  <div style="padding-top: 10em" class="divTitu">
+
+
       </div>      
             <div class="two-column-product">
                 <ul id="ulImagenes"> 
+                  <h2><%=products.name%></h2>
                     <li> <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
@@ -44,7 +45,7 @@
                           <span class="sr-only">Next</span>
                         </a>
                       </div>  </li>
-
+                      <h3><%=products.description%></h3>
                 </ul>
 
                 <ul class="column-right-side">
@@ -57,12 +58,14 @@
                     <li><a href="#">Mas informacion</a></li>
                     <li><button type="button" class="btn btn-primary btn-lg">Proximos Vuelos</button></li>
                     <li><button type="button" class="btn btn-primary btn-lg"> Contratar </button></li>
+                    <% if (locals.isLogged) {%>
                     <div class="btEliminar">  
                       <li><button type="button" class="btn btn-primary btn-lg"> <a class="editProduc" href="/edit/<%= products.id %>" class="action-button edit">Editar</a></button></li>
                       <form  action="/delete/<%= products.id %>?_method=DELETE" method="POST" >
                         <button class="btn btn-primary btn-lg" type="submit" >Eliminar</button>
                       </form>
                     </div>
+                    <% } %>
                 </ul>
             </div>
             
@@ -85,7 +88,7 @@
 		
                   
 
-    
+
         </main>
         
         

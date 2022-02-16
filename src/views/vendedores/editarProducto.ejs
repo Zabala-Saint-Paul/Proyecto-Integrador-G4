@@ -13,6 +13,8 @@
 		 <!-- HEADER -->
 		<!-- DIV PRINCIPAL -->
 	<main>
+		<br>
+		<br>
 		<div>
 	
 			<!-- DIV titulo -->
@@ -56,7 +58,13 @@
 							<textarea class="input1"  name="description" id="description" placeholder="<%= products.description %>"  ><%= products.description %></textarea>
 						</div>
 						<div class="div_botonHijos" >
-							<input class="input1" type="file" name="image" ></input>
+							<input class="input1" type="file" name="image" required></input>
+							<% if (locals.errors && errors.image) {%>
+                             
+								<p style='color:red'><%= errors.image.msg %></p>
+							  
+							  
+							  <% } %>
 						<!-- DIV por cada elemento que compone el forms -->
 						<br>
 						<br>

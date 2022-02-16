@@ -1,8 +1,5 @@
 #finCom{
   margin-top: 1em;
-  color: #30E3C1;
-  background-color: 6127D0;
-  font-weight: bold;
 }
 #tusCompras{
   padding-left: 1em;
@@ -15,14 +12,14 @@
   background-color: rgb(217, 223, 223);
   justify-content: center ;
 }
+.ncart{
+  width: 15em !important;
+}
 /*================MEDIDA PARA CELULARES================*/
 
 @media only screen and (max-width:480px){
   #finCom{
     margin-top: 1em;
-    color: #30E3C1;
-    background-color: 6127D0;
-    font-weight: bold;
   }
   #tusCompras{
     padding-left: 1em;

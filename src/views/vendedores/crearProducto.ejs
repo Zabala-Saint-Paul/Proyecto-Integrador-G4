@@ -23,30 +23,58 @@
 				<div>
 					<div class="div_hijocrear" >
 						<label for="name" >Nombre del producto:</label>
-						<input class="input1crear" type="text" id="name" name="name" placeholder="Ej: VIaje a Marte" >
+						<input value="<%= locals.oldData ? oldData.name :null %>" class="input1crear form-control <%= locals.errors && errors.name ? 'is-invalid':null %>" type="text" id="name" name="name" placeholder="Ej: VIaje a Marte" >
+						<% if (locals.errors && errors.name) {%>
+                             
+                            <p style='color:red'><%= errors.name.msg %></p>
+                          
+                          
+                          <%}%>
 					</div>
 					<div class="div_hijocrear" >
 						<label for="price" >Precio del producto:</label>
-						<input class="input1crear" type="text" id="price" name="price" placeholder="Ej: 123000000" >
+						<input value="<%= locals.oldData ? oldData.price :null %>" class="input1crear form-control <%= locals.errors && errors.price ? 'is-invalid':null %>" type="text" id="price" name="price" placeholder="Ej: 123000000" >
+						<% if (locals.errors && errors.price) {%>
+                             
+                            <p style='color:red'><%= errors.price.msg %></p>
+                          
+                          
+                          <%}%>
 					</div>
+					<!--
 					<div class="div_hijocrear" >
 						<label for="discount" >Descuento:</label>
-						<input class="input1crear" type="text" id="discount" name="discount" placeholder="Ej: 30" >
+						<input value="<%= locals.oldData ? oldData.discount :null %>" class="input1crear form-control" type="text" id="discount" name="discount" placeholder="Ej: 30" >
 					</div>
+					-->
+					<!--
 					<div class="div_hijocrear" >
 						<label for="category" >Categoría:</label>
-						<select class="input1crear" name="category" id="category" >
+						<select class="input1crear form-control" name="category" id="category" >
 							<option value="">Elegí</option>
 							<option value="in-sale">En oferta</option>
 							<option value="visited">Últimos agregados</option>
 						</select>
 					</div>
+					-->
 					<div class="div_hijocrear" >
 						<label for="description" >Descripción:</label>
-						<textarea class="input1crear" name="description" id="description" ></textarea>
+						<textarea class="input1crear form-control <%= locals.errors && errors.description ? 'is-invalid':null %>" name="description" id="description" ><%= locals.oldData ? oldData.price :null %></textarea>
+						<% if (locals.errors && errors.description) {%>
+                             
+                            <p style='color:red'><%= errors.description.msg %></p>
+                          
+                          
+                          <%}%>
 					</div>
 					<div class="div_botonHijoscrear">
 						<input type="file" name="image"></input>
+						<% if (locals.errors && errors.image) {%>
+                             
+                            <p style='color:red'><%= errors.image.msg %></p>
+                          
+                          
+                          <%}%>
 					</div>
 					<div class="div_botonHijoscrear" >
 						<button type="submit"  class="btn btn-primary" >Guardar producto</button>

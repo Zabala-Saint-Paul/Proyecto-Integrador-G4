@@ -8,19 +8,17 @@
             <ul class = "listaNav">
               <% if (locals.isLogged) {%>
               <li class = li1>
-                  <a class="href" href="/crearProducto">Crear Producto</a>
+                <% if (locals.userLogged) {%>
+                  <a class="href" href="/users/profile">Hola <%= locals.userLogged.firstName %>!</a>
+                  <% }%>
               </li>
-              <li class = li1>
-                <a>Precios</a>
+                <li class = li1>
+                  <a class="href" href="/crearProducto">Crear Producto</a>
               </li>
               <li class = li1>
                 <a class="href" href="/productsList">Productos</a>
               </li>
-              <li class = li1>
                 <% } else { %>
-              <li class = li1>
-                <a>Precios</a>
-              </li>
               <li class = li1>
                 <a class="href" href="/productsList">Productos</a>
               </li>
@@ -39,12 +37,16 @@
                 
                 <a class="href" href="/users/login"><i class="far fa-user-lock rIcono "></i></a>
               </li>
+              <% } else{ %>
+              <li class = li1>
+                
+                <a class="href" href="/users/profile">Perfil</a>
+              </li>
               <% } %>
               <li class = li1>
                  
                 <a class="href" href="/productCart"><i class="fas fa-cart-arrow-down rIcono"></i></a>
               </li>
-             
             </ul>
           </div>
         </nav>

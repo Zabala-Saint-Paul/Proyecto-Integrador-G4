@@ -1,10 +1,13 @@
+//En Routes o Enrutador
+//Importamos el controlador desde la carpeta controllers
 
+const productsController = require('./../controllers/productsController')
 //Importamos express
 
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
-
+const {body} = require('express-validator');
 
 //Creamos la constante router para utilizar express.Router()
 const router = express.Router();
@@ -22,11 +25,48 @@ const multerDiskStorage = multer.diskStorage({
 
 const uploadFile = multer({ storage: multerDiskStorage });
 
-//En Routes o Enrutador
-//Importamos el controlador desde la carpeta controllers
 
-const productsController = require('./../controllers/productsController')
 
+
+const validationRules = [
+    body('name')
+    .notEmpty().withMessage("Debes completar con el nombre del producto"),
+
+    body('price')
+    .notEmpty().withMessage("Debes completar con el precio").bail()
+    .custom((value, {req}) => {
+        let price = req.body.price
+        if(!price.includes('$')){
+            throw new Error('Tiene que incluir el simbolo $')
+        }
+        return true
+    }) ,
+
+    body('description')
+    .notEmpty().withMessage("Debes completar con la descripcion del producto"),
+    //Aca realizaremos una validacion custom porque no viene una predeterminada para las imagenes
+
+    body('image').custom((value, {req}) => {
+      let file = req.file;
+      let acceptedExtensions = ['.jpg', '.png','.gif'];
+      
+      if (!file){
+        throw new Error('Tienes que subir una imagen')
+      }else{
+        let fileExtension = path.extname(file.originalname);
+        if (!acceptedExtensions.includes(fileExtension)){
+          throw new Error(`Las extensiones permitidas son ${acceptedExtensions.join(', ')}`)
+  
+        }
+      }
+      
+      return true;
+    }),
+   
+
+
+    
+]
 //Utilizamos el metodo de transaccion .get para procesar la vista index
 //El primer parametro muestra la ruta definida (en este caso el home por eso solo la barra)
 //El segundo parametro utilizamos el controlador concatenado con el elemento a usar.
@@ -44,13 +84,13 @@ router.get('/productDetail/:id', productsController.productDetail)
 router.get('/productsList', productsController.productsList)
 //CREAR PRODUCTO//
 router.get('/crearProducto', productsController.crearProducto)
-router.post('/', uploadFile.single('image'), productsController.storeProduct)
+router.post('/', uploadFile.single('image'), validationRules, productsController.storeProduct)
 //router.post('/crearProducto',uploadFile.single('image'), productsController.crearProducto)
 
 //EDITAR PRODUCTO
 
 router.get('/edit/:id', productsController.editarProducto)
-router.put('/edit/:id', uploadFile.single('image'),productsController.update)
+router.put('/edit/:id', uploadFile.single('image'), validationRules, productsController.update)
 
 
 // ELIMINAR PRODUCTO

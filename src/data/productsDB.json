@@ -1,37 +1,37 @@
 [
  {
   "id": 1,
-  "name": "Urano",
-  "price": "$$$100000000",
-  "description": "Viaje Unico",
-  "image": "1643735441454.jpg"
+  "name": "Marte",
+  "price": "$2.000.000",
+  "description": "Viaje a Marte primera clase.",
+  "image": "1644972734875.jpg"
  },
  {
   "id": 2,
   "name": "Luna",
-  "price": "$$10000009",
-  "description": "Viaje Unico",
-  "image": "1-product.jpg"
+  "price": "$1.000.000",
+  "description": "Viaje Unico a la Luna.",
+  "image": "1644972910328.jpg"
  },
  {
   "id": 3,
   "name": "Pluton",
-  "price": "10000000000000000000000",
-  "description": "viaje a pluton",
-  "image": "2-product.jpg"
+  "price": "$5.000.000",
+  "description": "Viaje a Pluton, escala en Saturno",
+  "image": "1644972783591.jpg"
  },
  {
   "id": 4,
   "name": "Saturno",
-  "price": "10000000000000000000000",
-  "description": "viaje a Saturno",
-  "image": "2-product.jpg"
+  "price": "$3.500.000",
+  "description": "Viaje al misterioso planeta de Saturno",
+  "image": "1644972996757.jpg"
  },
  {
   "id": 5,
   "name": "Estratosfera",
-  "price": "10000000000000",
-  "description": "Viaje Unico",
+  "price": "$10.000.000",
+  "description": "Viaje Unico, 1 mes explorando la estratosfera",
   "image": "3-product.jpg"
  }
 ]
