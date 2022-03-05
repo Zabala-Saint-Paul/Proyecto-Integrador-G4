@@ -31,13 +31,13 @@
                             <%}%>
                     </li>
                     <li class = "liReg">
-                        <input name="lastName" 
-                        placeholder="Apellido" 
-                        class="form-control  <%= locals.errors && errors.lastName ? 'is-invalid':null %>"
-                        value="<%= locals.oldData ? oldData.lastName :null %>" />
-                        <% if (locals.errors && errors.lastName) {%>
+                        <input name="cuit" 
+                        placeholder="331234568" 
+                        class="form-control  <%= locals.errors && errors.cuit? 'is-invalid':null %>"
+                        value="<%= locals.oldData ? oldData.cuit :null %>" />
+                        <% if (locals.errors && errors.cuit) {%>
                              
-                            <p style='color:red'><%= errors.lastName.msg %></p>
+                            <p style='color:red'><%= errors.cuit.msg %></p>
                             
                             
                             <%}%>

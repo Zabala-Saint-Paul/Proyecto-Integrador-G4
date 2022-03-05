@@ -6,5 +6,13 @@
   "password": "$2a$10$C4zuX56/Mhn7Nx67/X.OBe3OFMyojDRFIyPuhYrXUcgLo6eROlBIO",
   "email": "1@1.com",
   "image": "1644981046533.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "Pedro",
+  "lastName": "Pedro",
+  "password": "$2a$10$jmUcGB/ZWQSe8wlI5KVKMOI18stVz2HCZOU0O/8jK1aAlF6.oThIO",
+  "email": "pedro@pedro.com",
+  "image": "1646488387090.jpg"
  }
 ]

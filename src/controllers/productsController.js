@@ -7,7 +7,8 @@ const dbProductsJSON = path.resolve(__dirname, '../data/productsDB.json');
 
 //transformar en objeto literal// Array de objetos literales
 let dbProducts = JSON.parse(fs.readFileSync(dbProductsJSON, 'utf8'));
-
+//Requiero la base de datos desde los modelos alwaysdata
+const db = require('../database/models');
 //Para formar el Unlink o unlikSync//
 // Se guarda en la variable images el path donde estan las imagenes de los productos//
 
@@ -19,16 +20,37 @@ const images = path.join(__dirname, '../../public/images');
 // Son las acciones que va a realizar mi controlador
 const controller = {
     index: function(req, res){
+        db.Viajes.findAll()
+        .then(function(viajes){
+           
+            return res.render('./products/index', {viaje:viajes})
+        })
+    
+    /*
         dbProducts = JSON.parse(fs.readFileSync(dbProductsJSON, 'utf8'));
         res.render('./products/index', {
             p: dbProducts
-        });
+        }); */
+
+      
+   
+   
     },
     productCart: function(req, res){
         res.render('./products/productCart')
     },
 
     productDetail: function(req, res){
+
+        db.Viajes.findByPk(req.params.id)
+        .then(function(viajes){
+           
+            res.render('./products/productDetail',{products:viajes})
+        })
+    
+
+/*
+
         let idProductoSeleccionado = req.params.id;
 		let productoSeleccionado;
 
@@ -41,17 +63,40 @@ const controller = {
 		}
 
 		
-        res.render('./products/productDetail',{products:productoSeleccionado})
+        res.render('./products/productDetail',{products:productoSeleccionado}) */
     },
     productsList: (req,res)=>{
+        db.Viajes.findAll()
+    .then(function(viajes){
+        
+        res.render('./products/productsList',{productsList:viajes})
+    })
+/*
         res.render('./products/productsList',{
             productsList: dbProducts
-        })
+        }) */
     },
     crearProducto: function(req,res){
         res.render('./vendedores/crearProducto')
     },
     storeProduct: function(req,res){
+
+        db.Viajes.create({
+      
+        
+            precio: req.body.price,
+            fecha:req.body.fecha,
+            descripcion: req.body.description,
+            nombre: req.body.name,
+            imagen_id: req.file.filename,
+            capacidad_nave:req.body.capacidad,
+            companiasFK: req.body.compania_id,
+    
+        });
+        res.redirect('/')
+
+ /*
+
        //Aca defino la variable que guarda los errores del ValidationRules que defini en el enrutador de User
 		const resultValidation = validationResult(req);
 		
@@ -86,9 +131,19 @@ const controller = {
         fs.writeFileSync(dbProductsJSON, JSON.stringify(dbProducts, null, " "));
 
         return res.redirect('/'); 
-
+            */
     },
+
+//IR A EDITAR PRODUCTO
     editarProducto: function(req,res){
+
+        db.Viajes.findByPk(req.params.id)
+        
+        .then(function(viajes){
+           
+            res.render('./vendedores/editarProducto',{products:viajes})
+        })
+        /*
         let idProductoSeleccionado = req.params.id;
 		let productoSeleccionado;
 
@@ -100,10 +155,29 @@ const controller = {
 			}
 		}
 		
-        res.render('./vendedores/editarProducto',{products:productoSeleccionado})
+        res.render('./vendedores/editarProducto',{products:productoSeleccionado})*/
     },
     update: function(req,res){
+     
+        db.Viajes.update({
       
+        
+            precio: req.body.price,
+            fecha:req.body.fecha,
+            descripcion: req.body.description,
+            nombre: req.body.name,
+            imagen_id: req.file.filename,
+            capacidad_nave:req.body.capacidad,
+            companiasFK: req.body.compania_id,
+    
+        },{
+            where:{
+                id: req.params.id}
+        });
+        res.redirect('/')
+
+       
+      /*
         let idProductoSeleccionado = req.params.id;
         let datos = req.body;
 
@@ -120,36 +194,42 @@ const controller = {
         //EL PRIMER PARAMETRO ES LA BD JSON IMPORTADA, EL SEGUNDO PARAMETRO LO ESTA SOBRE ESCRIBIENDO
 		fs.writeFileSync(dbProductsJSON, JSON.stringify(dbProducts,null,' '));
         
-	    res.redirect('/');
+	    res.redirect('/'); */
     },
    // Delete - Borrar un producto de la base de datos .json
 	destroy: (req, res) => {
 
+        db.Viajes.destroy({
+            where:{
+                id: req.params.id
+            }
+        })
+
 		//Obtengo el id del objeto que quiero eliminar
-        let idProductoSeleccionado = req.params.id;
+        //let idProductoSeleccionado = req.params.id;
        
         // en esta variable filtramos de la base de datos todos los productos que son distintos
         //al producto que se quiere eliminar
 
-		let products2 = dbProducts.filter(function(element){
-			return element.id!=idProductoSeleccionado;
-		})
+		//let products2 = dbProducts.filter(function(element){
+		//	return element.id!=idProductoSeleccionado;
+		//})
 
         //Para eliminiarla imagen del producto
 
-        let products1 = dbProducts.filter(function(element){
-            return element.id==idProductoSeleccionado;
-        })
+      //  let products1 = dbProducts.filter(function(element){
+       //     return element.id==idProductoSeleccionado;
+      //  })
         
        // Esta linea sirve para elimar la imagen del producto de la base de datos
 
-       fs.unlink(path.join(images,products1[0].image ),(err) => {if (err) console.log(err)})
+      // fs.unlink(path.join(images,products1[0].image ),(err) => {if (err) console.log(err)})
 
         //dbProductsJSON es la base de datos en formato Json
         //JSON.stringify transforma en json el array de objetos products2
         //Fs.writeFileSync sobre escribe el arhivo json dbProductsJason
 
-		fs.writeFileSync(dbProductsJSON, JSON.stringify(products2,null,' '));
+		//fs.writeFileSync(dbProductsJSON, JSON.stringify(products2,null,' '));
 
 	    res.redirect('/');
 
