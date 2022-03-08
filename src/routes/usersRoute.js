@@ -47,7 +47,7 @@ const validationRules = [
     .notEmpty().withMessage("Debes completar el CUIT corresponiente").bail()
     .custom((value, {req}) => {
         let cuit = req.body.cuit
-        if(!cuit == 'number' || !cuit.includes('-')){
+        if(!cuit == 'number' && !cuit.includes('-')){
             throw new Error('Debe completar con formato de CUIT')
         }
         return true

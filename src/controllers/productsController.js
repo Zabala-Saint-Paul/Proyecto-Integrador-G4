@@ -80,7 +80,18 @@ const controller = {
         res.render('./vendedores/crearProducto')
     },
     storeProduct: function(req,res){
-
+       //Aca defino la variable que guarda los errores del ValidationRules que defini en el enrutador de User
+       const resultValidation = validationResult(req);
+		
+       //Aca voy a decir que si hay errores quiero que estos se rendericen en el formulario de registro
+       if (resultValidation.errors.length > 0){
+           return res.render('./vendedores/crearProducto',{
+               //Transformo el array en un objeto literal
+               errors: resultValidation.mapped(),
+               oldData: req.body,
+           });
+       }
+       
         db.Viajes.create({
       
         
@@ -95,20 +106,10 @@ const controller = {
         });
         res.redirect('/')
 
- /*
+ 
 
-       //Aca defino la variable que guarda los errores del ValidationRules que defini en el enrutador de User
-		const resultValidation = validationResult(req);
-		
-		//Aca voy a decir que si hay errores quiero que estos se rendericen en el formulario de registro
-		if (resultValidation.errors.length > 0){
-			return res.render('./vendedores/crearProducto',{
-				//Transformo el array en un objeto literal
-				errors: resultValidation.mapped(),
-				oldData: req.body,
-			});
-		}
-       
+
+       /*
         const generateID = () => {
 			// 1. Obtenemos el último producto almacenado en la DB
 			const lastProduct = dbProducts[dbProducts.length - 1];

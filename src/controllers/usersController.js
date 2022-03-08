@@ -58,6 +58,7 @@ const controller = {
 			nombre: req.body.firstName,
 			contraseña: bcrypt.hashSync(req.body.password, 10),      
 			cuit: req.body.cuit,
+			imagen_id: req.file.filename,
 		})
 		
 

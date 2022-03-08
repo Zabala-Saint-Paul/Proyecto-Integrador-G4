@@ -21,7 +21,7 @@
                     <li class = "liReg">
                         <input class="form-control  <%= locals.errors && errors.firstName ? 'is-invalid':null %>" 
                         name="firstName" 
-                        placeholder="Nombre" 
+                        placeholder="Usuario" 
                         value="<%= locals.oldData ? oldData.firstName :null %>"/>
                         <% if (locals.errors && errors.firstName) {%>
                              
@@ -32,7 +32,7 @@
                     </li>
                     <li class = "liReg">
                         <input name="cuit" 
-                        placeholder="331234568" 
+                        placeholder="CUIT" 
                         class="form-control  <%= locals.errors && errors.cuit? 'is-invalid':null %>"
                         value="<%= locals.oldData ? oldData.cuit :null %>" />
                         <% if (locals.errors && errors.cuit) {%>

@@ -4,10 +4,11 @@
 const productsController = require('./../controllers/productsController')
 //Importamos express
 
+const {body} = require('express-validator');
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
-const {body} = require('express-validator');
+
 
 //Creamos la constante router para utilizar express.Router()
 const router = express.Router();

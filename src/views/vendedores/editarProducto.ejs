@@ -24,27 +24,22 @@
 				<div>
 					<div class="div_hijocrear" >
 						<label for="name" >Nombre del producto:</label>
-						<input class="input1" type="text" id="name" name="name"  value="<%= products.nombre %>"  >
+						<input class="input1 input1crear form-control" type="text" id="name" name="name"  value="<%= products.nombre %>"  >
 						
 					</div>
 					<div class="div_hijocrear" >
 						<label for="price" >Precio del producto:</label>
-						<input class="input1" type="text" id="price" name="price"  value="<%= products.precio %>" >
+						<input class="input1 input1crear form-control" type="number" id="price" name="price"  value="<%= products.precio %>" >
 						
 					</div>
                     <div class="div_hijocrear" >
 						<label for="fecha" >Fecha del Viaje:</label>
-						<input  type="date" id="fecha" name="fecha" value="<%=products.fecha%>"  >
+						<input class="input1 input1crear form-control" type="date" id="fecha" name="fecha" value="<%=products.fecha%>"  >
 						
 					</div>
                     <div class="div_hijocrear" >
 						<label for="capacidad" >Capacidad:</label>
-						<input type="number" id="capacidad" name="capacidad"  value="<%=products.capacidad_nave %>" >
-
-					</div>
-					<div class="div_hijocrear" >
-						<label for="capacidad" >Compania ID:</label>
-						<input type="number" id="compania_id" name="compania_id"  value="<%=products.companiasFK%>">
+						<input class="input1 input1crear form-control" type="number" id="capacidad" name="capacidad"  value="<%=products.capacidad_nave %>" >
 
 					</div>
 					<!--
@@ -65,7 +60,7 @@
 					-->
 					<div class="div_hijo">
 						<label  for="description" >Descripción:</label>
-						<textarea class="input1"  name="description" id="description"   ><%= products.descripcion %></textarea>
+						<textarea class="input1 input1crear form-control"  name="description" id="description"   ><%= products.descripcion %></textarea>
 					</div>
 
 					<div class="div_botonHijos" >
