@@ -41,6 +41,7 @@
                           
                           <%}%>
 					</div>
+					
 					<!--
 					<div class="div_hijocrear" >
 						<label for="discount" >Descuento:</label>
@@ -57,6 +58,26 @@
 						</select>
 					</div>
 					-->
+					<div class="div_hijocrear" >
+						<label for="fecha" >Fecha del viaje:</label>
+						<input value="<%= locals.oldData ? oldData.fecha :null %>" class="input1crear form-control <%= locals.fecha && errors.fecha ? 'is-invalid':null %>" type="date" id="fecha" name="fecha" placeholder="dia/mes/año" >
+						<% if (locals.errors && errors.fecha) {%>
+                             
+                            <p style='color:red'><%= errors.fecha.msg %></p>
+                          
+                          
+                          <%}%>
+					</div>
+					<div class="div_hijocrear" >
+						<label for="capacidad" >capacidad de la nave:</label>
+						<input value="<%= locals.oldData ? oldData.capacidad :null %>" class="input1crear form-control <%= locals.capacidad && errors.capacidad ? 'is-invalid':null %>" type="number" id="capacidad" name="capacidad" placeholder="Asientos disponibles" >
+						<% if (locals.errors && errors.capacidad) {%>
+                             
+                            <p style='color:red'><%= errors.capacidad.msg %></p>
+                          
+                          
+                          <%}%>
+					</div>
 					<div class="div_hijocrear" >
 						<label for="description" >Descripción:</label>
 						<textarea class="input1crear form-control <%= locals.errors && errors.description ? 'is-invalid':null %>" name="description" id="description" ><%= locals.oldData ? oldData.description :null %></textarea>

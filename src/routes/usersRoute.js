@@ -32,16 +32,23 @@ const validationRules = [
     body('firstName')
     .notEmpty().withMessage("Debes completar con el nombre completo"),
 
-    body('lastName')
-    .notEmpty().withMessage("Debes completar con el apellido completo"),
-
     body('email')
     .notEmpty().withMessage('Debes completar con el email').bail()
     .isEmail().withMessage('El formato debe ser del estilo direccion@algo.com'),
 
     body('password')
-    .notEmpty().withMessage('Debes completar este campo').bail()
+    .notEmpty().withMessage('Eliga una contraseña').bail()
     .isLength({min:8}).withMessage('Como minimo tiene que tener 8 caracteres'),
+
+    body('cuit')
+    .notEmpty().withMessage("Debes completar el CUIT corresponiente").bail()
+    .custom((value, {req}) => {
+        let cuit = req.body.cuit
+        if(!cuit == 'number' || !cuit.includes('-')){
+            throw new Error('Debe completar con formato de CUIT')
+        }
+        return true
+    }) ,
 
     //Aca realizaremos una validacion custom porque no viene una predeterminada para las imagenes
 

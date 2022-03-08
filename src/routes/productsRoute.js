@@ -42,6 +42,19 @@ const validationRules = [
         return true
     }) ,
 
+    body('capacidad')
+    .notEmpty().withMessage("Debes completar con la cantidad de asientos").bail()
+    .custom((value, {req}) => {
+        let capacidad = req.body.capacidad
+        if(!capacidad == 'number' || capacidad <= 0){
+            throw new Error('Debe completar con un numero positivo')
+        }
+        return true
+    }) ,
+
+    body('fecha')
+    .notEmpty().withMessage("Debes completar con la fecha del viaje"),
+
     body('description')
     .notEmpty().withMessage("Debes completar con la descripcion del producto"),
     //Aca realizaremos una validacion custom porque no viene una predeterminada para las imagenes
