@@ -1,88 +1,97 @@
 
-<html >
+<html>
+
+	
 	<!-- HEAD-->
-	
+
 	<%- include('./../partials/head') %> 
-	
+
 	<!-- HEAD -->
-	<body>
-		 <!-- HEADER-->
+
 	
-		 <%- include('./../partials/header') %> 
-	
-		 <!-- HEADER -->
-		<!-- DIV PRINCIPAL -->
-	<main>
-		<br>
-		<br>
-		<div>
-	
-			<!-- DIV titulo -->
-			<div>
-				<div class="divCrear" >
-					
-					<h2 id="login" >Editando: <%= products.name %> </h2> 
-				</div>
-			</div>
-			<!-- DIV del Formulario Completo-->
-			<div class="formEdit" >
-	
-				<form  action="/edit/<%=products.id%>?_method=PUT"  method="post" enctype="multipart/form-data">
-			<!-- DIV que contiene todo el forms -->
-					<div >
-						<!-- DIV por cada elemento que compone el forms -->
-						<div class="div_hijo" >
-							<label  for="name" >Nombre del producto: </label>
-							<input class="input1" type="text" id="name" name="name" placeholder="<%= products.name %>" value="<%= products.name %>"  >
-						</div>
-						<!-- DIV por cada elemento que compone el forms -->
-						<div class="div_hijo" >
-							<label  for="price" >Precio del producto: </label>
-							<input class="input1" type="text" id="price" name="price" placeholder="<%= products.price %>" value="<%= products.price %>" >
-						</div>
+<body>
+	<!-- HEADER-->
+
+	<%- include('./../partials/header') %> 
+
+	<!-- HEADER -->
+<main >
+	<div class="divCrear">
+		<h2 id="login" >Editando viaje a : <%= products.nombre %> </h2> 
+	</div>
+		<div class="formEdit">
+			<form  action="/edit/<%=products.id%>?_method=PUT"  method="post" enctype="multipart/form-data">
+				<div>
+					<div class="div_hijocrear" >
+						<label for="name" >Nombre del producto:</label>
+						<input class="input1" type="text" id="name" name="name"  value="<%= products.nombre %>"  >
 						
-						<!-- DIV por cada elemento que compone el forms 
-						<div class="div_hijo">
-							<label  for="category" >Categoría:</label>
-							<select class="input1" name="category" id="category" >
-								<option value="">Elegí</option>
-								<option value="in-sale">Geoespacio</option>
-								<option value="visited">Espacio lunar</option>
-								<option value="visited">Medio interplanetario</option>
-								<option value="visited">Medio interestelar</option>
-							</select>
-						</div>-->
-						<!-- DIV por cada elemento que compone el forms -->
-						<div class="div_hijo">
-							<label  for="description" >Descripción:</label>
-							<textarea class="input1"  name="description" id="description" placeholder="<%= products.description %>"  ><%= products.description %></textarea>
-						</div>
-						<div class="div_botonHijos" >
-							<input class="input1" type="file" name="image" required></input>
-							<% if (locals.errors && errors.image) {%>
-                             
-								<p style='color:red'><%= errors.image.msg %></p>
-							  
-							  
-							  <% } %>
-						<!-- DIV por cada elemento que compone el forms -->
-						<br>
-						<br>
-						<div >
-							<!--<button type="submit" class="buy-now-button">Guardar producto</button>-->
-							<button type="submit" class="btn btn-primary">Guardar producto</button>
-						</div>
 					</div>
-				</form>
-			</div>
-	
+					<div class="div_hijocrear" >
+						<label for="price" >Precio del producto:</label>
+						<input class="input1" type="text" id="price" name="price"  value="<%= products.precio %>" >
+						
+					</div>
+                    <div class="div_hijocrear" >
+						<label for="fecha" >Fecha del Viaje:</label>
+						<input  type="date" id="fecha" name="fecha" value="<%=products.fecha%>"  >
+						
+					</div>
+                    <div class="div_hijocrear" >
+						<label for="capacidad" >Capacidad:</label>
+						<input type="number" id="capacidad" name="capacidad"  value="<%=products.capacidad_nave %>" >
+
+					</div>
+					<div class="div_hijocrear" >
+						<label for="capacidad" >Compania ID:</label>
+						<input type="number" id="compania_id" name="compania_id"  value="<%=products.companiasFK%>">
+
+					</div>
+					<!--
+					<div class="div_hijocrear" >
+						<label for="discount" >Descuento:</label>
+						<input value="<%= locals.oldData ? oldData.discount :null %>" class="input1crear form-control" type="text" id="discount" name="discount" placeholder="Ej: 30" >
+					</div>
+					-->
+					<!--
+					<div class="div_hijocrear" >
+						<label for="category" >Categoría:</label>
+						<select class="input1crear form-control" name="category" id="category" >
+							<option value="">Elegí</option>
+							<option value="in-sale">En oferta</option>
+							<option value="visited">Últimos agregados</option>
+						</select>
+					</div>
+					-->
+					<div class="div_hijo">
+						<label  for="description" >Descripción:</label>
+						<textarea class="input1"  name="description" id="description"   ><%= products.descripcion %></textarea>
+					</div>
+
+					<div class="div_botonHijos" >
+						<input class="input1" type="file" name="image" required></input>
+						<% if (locals.errors && errors.image) {%>
+						 
+							<p style='color:red'><%= errors.image.msg %></p>
+						  
+						  
+						  <% } %>
+					<!-- DIV por cada elemento que compone el forms -->
+					<br>
+					<br>
+					<div >
+					<div class="div_botonHijoscrear" >
+						<button type="submit"  class="btn btn-primary" >Guardar producto</button>
+					</div>
+				</div>
+			</form>
 		</div>
 		<br>
-	</main>
-	</body>	
+</main>
+</body>	
+	<!-- FOOTER-->
+
+	<%- include('./../partials/footer') %> 
+
 	<!-- FOOTER -->
-	
-	<%- include('./../partials/footer') %>
-	
-	<!-- FOOTER -->
-	</html>
+</html>

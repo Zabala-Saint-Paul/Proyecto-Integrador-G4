@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- HEAD-->
 
@@ -21,12 +22,12 @@
 
 			<% productsList.forEach(oneProduct => { %>
 			<div class="divProductos">
-		  		<h4 class="divtitulos" ><%= oneProduct.name %> </h4>
+		  		<h4 class="divtitulos" ><%= oneProduct.nombre %> </h4>
 		  		<div>
-		 	 		<a href="/productDetail/<%=oneProduct.id%>"><img class="imagLista" src="/images/<%= oneProduct.image %>" class="pdt-image"></a>
+		 	 		<a href="/productDetail/<%=oneProduct.id%>"><img class="imagLista" src="/images/<%= oneProduct.imagen_id %>" class="pdt-image"></a>
 				</div>
-				<p class="divPrice"><strong>Precio:</strong> <%= oneProduct.price %> </p>
-				<p class="divDescrip"><%= oneProduct.description %></p>
+				<p class="divPrice"><strong>Precio:</strong> <%= oneProduct.precio %> </p>
+				<p class="divDescrip"><%= oneProduct.descripcion %></p>
 			</div>  
 		 
 		  

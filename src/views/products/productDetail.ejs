@@ -23,11 +23,11 @@
       </div>      
             <div class="two-column-product">
                 <ul id="ulImagenes"> 
-                  <h2><%=products.name%></h2>
+                  <h2><%=products.nombre%></h2>
                     <li> <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img class="d-block w-100" src="/images/<%= products.image %>" alt="First slide">
+                            <img class="d-block w-100" src="/images/<%= products.imagen_id %>" alt="First slide">
                           </div>
                           <div class="carousel-item">
                             <img class="d-block w-100" src="images/2-product.jpg" alt="Second slide">
@@ -45,11 +45,11 @@
                           <span class="sr-only">Next</span>
                         </a>
                       </div>  </li>
-                      <h3><%=products.description%></h3>
+                      <h3><%=products.descripcion%></h3>
                 </ul>
 
                 <ul class="column-right-side">
-                    <li class="precio"> <%=products.price%></li>
+                    <li class="precio"> <%=products.precio%></li>
                     <li> Selecciona la fecha</li>
                     <li> <input type="date" placeholder="Seleccionar Fecha"></li>
                     <li> Contactate, conocé los mejores paquetes  pensados ​​para vos .</li>

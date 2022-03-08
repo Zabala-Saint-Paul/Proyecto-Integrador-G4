@@ -32,8 +32,8 @@
                     </li>
                     <li class = "liReg">
                         <input name="cuit" 
-                        placeholder="CUIT" 
-                        class="form-control  <%= locals.errors && errors.cuit ? 'is-invalid':null %>"
+                        placeholder="331234568" 
+                        class="form-control  <%= locals.errors && errors.cuit? 'is-invalid':null %>"
                         value="<%= locals.oldData ? oldData.cuit :null %>" />
                         <% if (locals.errors && errors.cuit) {%>
                              

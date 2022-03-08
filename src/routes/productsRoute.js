@@ -111,6 +111,8 @@ router.put('/edit/:id', uploadFile.single('image'), validationRules, productsCon
 router.delete('/delete/:id', productsController.destroy); 
 
 
+
+
 //Exportamos el metodo de transaccion definido para ser utilizado
 
 module.exports =router;

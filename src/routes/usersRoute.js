@@ -32,6 +32,9 @@ const validationRules = [
     body('firstName')
     .notEmpty().withMessage("Debes completar con el nombre completo"),
 
+    body('cuit')
+    .notEmpty().withMessage("Debes completar con el cuit de la empresa"),
+
     body('email')
     .notEmpty().withMessage('Debes completar con el email').bail()
     .isEmail().withMessage('El formato debe ser del estilo direccion@algo.com'),
@@ -91,6 +94,8 @@ router.post('/', uploadFile.single('image'),validationRules, usersController.sto
 router.get('/profile', usersController.profile);
 //Logout
 router.get('/logout', usersController.logout);
+
+
 
 //Exportamos el metodo de transaccion definido para ser utilizado
 
