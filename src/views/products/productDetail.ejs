@@ -57,7 +57,7 @@
                     <li><i class="fab fa-cc-visa fa-2x"></i><i class="fab fa-cc-paypal fa-2x"></i><i class="fab fa-cc-mastercard fa-2x"></i><i class="fab fa-cc-amex fa-2x"></i></li>
                     <li><a href="#">Mas informacion</a></li>
                     <li><button type="button" class="btn btn-primary btn-lg">Proximos Vuelos</button></li>
-                    <li><button type="button" class="btn btn-primary btn-lg"> Contratar </button></li>
+                    <li><button id="contratar" type="button" class="btn btn-primary btn-lg"> Agregar al Carrito </button></li>
                     <% if (locals.isLogged) {%>
                     <div class="btEliminar">  
                       <li><button type="button" class="btn btn-primary btn-lg"> <a class="editProduc" href="/edit/<%= products.id %>" class="action-button edit">Editar</a></button></li>
@@ -68,31 +68,9 @@
                     <% } %>
                 </ul>
             </div>
-            
-            
-           <!--  <h1><%=products.id%></h1>
-            <h1><%=products.name%></h1>
-            <h1><%=products.price%></h1>
-            <h1><%=products.description%></h1>
-            <img src="/images/<%= products.image %>" alt="product image" class="product-detail-img">
-            <a href="/edit/<%= products.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-
-            <form action="/delete/<%= products.id %>?_method=DELETE" method="POST" >
-							<button type="submit" >ELIMINAR</button>
-						</form>
-          </article>
-				</div>
-			</div>
-		</div>
-	</div>-->
-		
-                  
-
   <br>
         </main>
-        
-        
-
+        <script src="./../../js/carrito.js"></script>
     </body>
     <!-- FOOTER -->
 

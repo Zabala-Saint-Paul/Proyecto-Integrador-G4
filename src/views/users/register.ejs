@@ -19,7 +19,7 @@
             <form class="regForm" action="/users" method="post" enctype="multipart/form-data">
                 <ul id = "ulReg">
                     <li class = "liReg">
-                        <input class="form-control  <%= locals.errors && errors.firstName ? 'is-invalid':null %>" 
+                        <input class="usuario form-control  <%= locals.errors && errors.firstName ? 'is-invalid':null %>" 
                         name="firstName" 
                         placeholder="Usuario" 
                         value="<%= locals.oldData ? oldData.firstName :null %>"/>
@@ -33,7 +33,7 @@
                     <li class = "liReg">
                         <input name="cuit" 
                         placeholder="CUIT" 
-                        class="form-control  <%= locals.errors && errors.cuit? 'is-invalid':null %>"
+                        class="cuit form-control  <%= locals.errors && errors.cuit? 'is-invalid':null %>"
                         value="<%= locals.oldData ? oldData.cuit :null %>" />
                         <% if (locals.errors && errors.cuit) {%>
                              
@@ -47,7 +47,7 @@
                         type="email" 
                         placeholder="Correo Electronico" 
                         value="<%= locals.oldData ? oldData.email :null %>" 
-                        class="form-control  <%= locals.errors && errors.email ? 'is-invalid':null %>"/>
+                        class="email form-control  <%= locals.errors && errors.email ? 'is-invalid':null %>"/>
                         <% if (locals.errors && errors.email) {%>
                              
                             <p style='color:red'><%= errors.email.msg %></p>
@@ -59,7 +59,7 @@
                         <input name="password" 
                         type="password" 
                         placeholder="Contraseña" 
-                        class="form-control  <%= locals.errors && errors.password ? 'is-invalid':null %>"/>
+                        class="password form-control  <%= locals.errors && errors.password ? 'is-invalid':null %>"/>
                         <% if (locals.errors && errors.password) {%>
                              
                             <p style='color:red'><%= errors.password.msg %></p>
@@ -68,7 +68,7 @@
                           <%}%>
                     </li>
                     <div class="div_botonHijoscrear">
-						<input type="file" name="image"></input>
+						<input class="image" type="file" name="image"></input>
                         <% if (locals.errors && errors.image) {%>
                              
                             <p style='color:red'><%= errors.image.msg %></p>
@@ -89,7 +89,8 @@
                 </ul>
             </form>
             <br>
-        </main>           
+        </main>     
+        <script src="./../../js/vRegister.js"></script>    
     </body>
 
 <!-- FOOTER -->

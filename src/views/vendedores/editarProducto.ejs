@@ -20,51 +20,35 @@
 		<h2 id="login" >Editando viaje a : <%= products.nombre %> </h2> 
 	</div>
 		<div class="formEdit">
-			<form  action="/edit/<%=products.id%>?_method=PUT"  method="post" enctype="multipart/form-data">
+			<form class="editarProducto" action="/edit/<%=products.id%>?_method=PUT"  method="post" enctype="multipart/form-data">
 				<div>
 					<div class="div_hijocrear" >
 						<label for="name" >Nombre del producto:</label>
-						<input class="input1 input1crear form-control" type="text" id="name" name="name"  value="<%= products.nombre %>"  >
+						<input class="name input1 input1crear form-control" type="text" id="name" name="name"  value="<%= products.nombre %>"  >
 						
 					</div>
 					<div class="div_hijocrear" >
 						<label for="price" >Precio del producto:</label>
-						<input class="input1 input1crear form-control" type="number" id="price" name="price"  value="<%= products.precio %>" >
+						<input class="price input1 input1crear form-control" type="text" id="price" name="price"  value="<%= products.precio %>" >
 						
 					</div>
                     <div class="div_hijocrear" >
 						<label for="fecha" >Fecha del Viaje:</label>
-						<input class="input1 input1crear form-control" type="date" id="fecha" name="fecha" value="<%=products.fecha%>"  >
+						<input class="fecha input1 input1crear form-control" type="date" id="fecha" name="fecha" value="<%=products.fecha%>"  >
 						
 					</div>
                     <div class="div_hijocrear" >
 						<label for="capacidad" >Capacidad:</label>
-						<input class="input1 input1crear form-control" type="number" id="capacidad" name="capacidad"  value="<%=products.capacidad_nave %>" >
+						<input class="capacidad input1 input1crear form-control" type="number" id="capacidad" name="capacidad"  value="<%=products.capacidad_nave %>" >
 
 					</div>
-					<!--
-					<div class="div_hijocrear" >
-						<label for="discount" >Descuento:</label>
-						<input value="<%= locals.oldData ? oldData.discount :null %>" class="input1crear form-control" type="text" id="discount" name="discount" placeholder="Ej: 30" >
-					</div>
-					-->
-					<!--
-					<div class="div_hijocrear" >
-						<label for="category" >Categoría:</label>
-						<select class="input1crear form-control" name="category" id="category" >
-							<option value="">Elegí</option>
-							<option value="in-sale">En oferta</option>
-							<option value="visited">Últimos agregados</option>
-						</select>
-					</div>
-					-->
 					<div class="div_hijo">
 						<label  for="description" >Descripción:</label>
-						<textarea class="input1 input1crear form-control"  name="description" id="description"   ><%= products.descripcion %></textarea>
+						<textarea class="description input1 input1crear form-control"  name="description" id="description"   ><%= products.descripcion %></textarea>
 					</div>
 
 					<div class="div_botonHijos" >
-						<input class="input1" type="file" name="image" required></input>
+						<input class="image input1" type="file" name="image" required></input>
 						<% if (locals.errors && errors.image) {%>
 						 
 							<p style='color:red'><%= errors.image.msg %></p>
@@ -83,6 +67,7 @@
 		</div>
 		<br>
 </main>
+<script src="./../../js/vEditarProducto.js"></script>
 </body>	
 	<!-- FOOTER-->
 

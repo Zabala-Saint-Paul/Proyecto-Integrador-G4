@@ -19,11 +19,11 @@
 		<h2 id="login" >Formulario de Viajes a Ofrecer</h2>
 	</div>
 		<div class="formEdit">
-			<form action = "/" method="POST" enctype="multipart/form-data">
+			<form class= "crearProducto" action = "/" method="POST" enctype="multipart/form-data">
 				<div>
 					<div class="div_hijocrear" >
 						<label for="name" >Nombre del producto:</label>
-						<input value="<%= locals.oldData ? oldData.name :null %>" class="input1crear form-control <%= locals.errors && errors.name ? 'is-invalid':null %>" type="text" id="name" name="name" placeholder="Ej: VIaje a Marte" >
+						<input value="<%= locals.oldData ? oldData.name :null %>" class="name input1crear form-control <%= locals.errors && errors.name ? 'is-invalid':null %>" type="text" id="name" name="name" placeholder="Ej: VIaje a Marte" >
 						<% if (locals.errors && errors.name) {%>
                              
                             <p style='color:red'><%= errors.name.msg %></p>
@@ -33,7 +33,7 @@
 					</div>
 					<div class="div_hijocrear" >
 						<label for="price" >Precio del producto:</label>
-						<input value="<%= locals.oldData ? oldData.price :null %>" class="input1crear form-control <%= locals.errors && errors.price ? 'is-invalid':null %>" type="text" id="price" name="price" placeholder="Ej: 123000000" >
+						<input value="<%= locals.oldData ? oldData.price :null %>" class="price input1crear form-control <%= locals.errors && errors.price ? 'is-invalid':null %>" type="text" id="price" name="price" placeholder="Ej: 123000000" >
 						<% if (locals.errors && errors.price) {%>
                              
                             <p style='color:red'><%= errors.price.msg %></p>
@@ -41,25 +41,9 @@
                           
                           <%}%>
 					</div>
-					<!--
-					<div class="div_hijocrear" >
-						<label for="discount" >Descuento:</label>
-						<input value="<%= locals.oldData ? oldData.discount :null %>" class="input1crear form-control" type="text" id="discount" name="discount" placeholder="Ej: 30" >
-					</div>
-					-->
-					<!--
-					<div class="div_hijocrear" >
-						<label for="category" >Categoría:</label>
-						<select class="input1crear form-control" name="category" id="category" >
-							<option value="">Elegí</option>
-							<option value="in-sale">En oferta</option>
-							<option value="visited">Últimos agregados</option>
-						</select>
-					</div>
-					-->
 					<div class="div_hijocrear" >
 						<label for="fecha" >Fecha del viaje:</label>
-						<input value="<%= locals.oldData ? oldData.fecha :null %>" class="input1crear form-control <%= locals.fecha && errors.fecha ? 'is-invalid':null %>" type="date" id="fecha" name="fecha" placeholder="dia/mes/año" >
+						<input value="<%= locals.oldData ? oldData.fecha :null %>" class="fecha input1crear form-control <%= locals.fecha && errors.fecha ? 'is-invalid':null %>" type="date" id="fecha" name="fecha" placeholder="dia/mes/año" >
 						<% if (locals.errors && errors.fecha) {%>
                              
                             <p style='color:red'><%= errors.fecha.msg %></p>
@@ -69,7 +53,7 @@
 					</div>
 					<div class="div_hijocrear" >
 						<label for="capacidad" >capacidad de la nave:</label>
-						<input value="<%= locals.oldData ? oldData.capacidad :null %>" class="input1crear form-control <%= locals.capacidad && errors.capacidad ? 'is-invalid':null %>" type="number" id="capacidad" name="capacidad" placeholder="Asientos disponibles" >
+						<input value="<%= locals.oldData ? oldData.capacidad :null %>" class="capacidad input1crear form-control <%= locals.capacidad && errors.capacidad ? 'is-invalid':null %>" type="number" id="capacidad" name="capacidad" placeholder="Asientos disponibles" >
 						<% if (locals.errors && errors.capacidad) {%>
                              
                             <p style='color:red'><%= errors.capacidad.msg %></p>
@@ -79,7 +63,7 @@
 					</div>
 					<div class="div_hijocrear" >
 						<label for="description" >Descripción:</label>
-						<textarea class="input1crear form-control <%= locals.errors && errors.description ? 'is-invalid':null %>" name="description" id="description" ><%= locals.oldData ? oldData.description :null %></textarea>
+						<textarea class="description input1crear form-control <%= locals.errors && errors.description ? 'is-invalid':null %>" name="description" id="description" ><%= locals.oldData ? oldData.description :null %></textarea>
 						<% if (locals.errors && errors.description) {%>
                              
                             <p style='color:red'><%= errors.description.msg %></p>
@@ -88,7 +72,7 @@
                           <%}%>
 					</div>
 					<div class="div_botonHijoscrear">
-						<input type="file" name="image"></input>
+						<input class="image" id="image" type="file" name="image"></input>
 						<% if (locals.errors && errors.image) {%>
                              
                             <p style='color:red'><%= errors.image.msg %></p>
@@ -104,6 +88,7 @@
 		</div>
 		<br>
 </main>
+<script src="./../../js/vCrearProducto.js"></script>
 </body>	
 	<!-- FOOTER-->
 

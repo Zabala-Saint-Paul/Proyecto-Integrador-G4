@@ -25,16 +25,6 @@ const controller = {
            
             return res.render('./products/index', {viaje:viajes})
         })
-    
-    /*
-        dbProducts = JSON.parse(fs.readFileSync(dbProductsJSON, 'utf8'));
-        res.render('./products/index', {
-            p: dbProducts
-        }); */
-
-      
-   
-   
     },
     productCart: function(req, res){
         res.render('./products/productCart')
@@ -47,23 +37,6 @@ const controller = {
            
             res.render('./products/productDetail',{products:viajes})
         })
-    
-
-/*
-
-        let idProductoSeleccionado = req.params.id;
-		let productoSeleccionado;
-
-		for (let p of dbProducts){
-
-			if(p.id==idProductoSeleccionado){
-				productoSeleccionado=p;
-				break;
-			}
-		}
-
-		
-        res.render('./products/productDetail',{products:productoSeleccionado}) */
     },
     productsList: (req,res)=>{
         db.Viajes.findAll()
@@ -71,10 +44,7 @@ const controller = {
         
         res.render('./products/productsList',{productsList:viajes})
     })
-/*
-        res.render('./products/productsList',{
-            productsList: dbProducts
-        }) */
+
     },
     crearProducto: function(req,res){
         res.render('./vendedores/crearProducto')
@@ -101,38 +71,10 @@ const controller = {
             nombre: req.body.name,
             imagen_id: req.file.filename,
             capacidad_nave:req.body.capacidad,
-            companiasFK: req.body.compania_id,
+            companiasFK: 1,
     
         });
         res.redirect('/')
-
- 
-
-
-       /*
-        const generateID = () => {
-			// 1. Obtenemos el último producto almacenado en la DB
-			const lastProduct = dbProducts[dbProducts.length - 1];
-			// 2. Obtenemos el ID de ese último producto
-			const lastID = lastProduct.id;
-			// 3. Retornamos ese último ID incrementado en 1
-			return lastID + 1;
-		}
-
-        const newProduct = {
-            id: generateID(),
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            image: req.file.filename,
-        }
-
-        dbProducts.push(newProduct)
-
-        fs.writeFileSync(dbProductsJSON, JSON.stringify(dbProducts, null, " "));
-
-        return res.redirect('/'); 
-            */
     },
 
 //IR A EDITAR PRODUCTO
@@ -144,19 +86,6 @@ const controller = {
            
             res.render('./vendedores/editarProducto',{products:viajes})
         })
-        /*
-        let idProductoSeleccionado = req.params.id;
-		let productoSeleccionado;
-
-		for (let p of dbProducts){
-
-			if(p.id==idProductoSeleccionado){
-				productoSeleccionado=p;
-				break;
-			}
-		}
-		
-        res.render('./vendedores/editarProducto',{products:productoSeleccionado})*/
     },
     update: function(req,res){
      
@@ -176,26 +105,6 @@ const controller = {
                 id: req.params.id}
         });
         res.redirect('/')
-
-       
-      /*
-        let idProductoSeleccionado = req.params.id;
-        let datos = req.body;
-
-		for (let p of dbProducts){
-            
-            if(p.id == idProductoSeleccionado) {
-                p.name = datos.name;
-				p.price = datos.price;
-                p.image = req.file.filename;          
-                p.description = datos.description;
-				break;
-            }
-		}
-        //EL PRIMER PARAMETRO ES LA BD JSON IMPORTADA, EL SEGUNDO PARAMETRO LO ESTA SOBRE ESCRIBIENDO
-		fs.writeFileSync(dbProductsJSON, JSON.stringify(dbProducts,null,' '));
-        
-	    res.redirect('/'); */
     },
    // Delete - Borrar un producto de la base de datos .json
 	destroy: (req, res) => {
@@ -236,15 +145,6 @@ const controller = {
 
 
 	},
-   
-   
-
-	
-	
-       
-    
-
-
 }
 
 module.exports = controller

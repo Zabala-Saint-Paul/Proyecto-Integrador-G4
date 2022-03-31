@@ -24,10 +24,11 @@
                     <p>
                       <!-- campo para el usuario -->
                       <input  
+                      id="email"
                       type="email" 
                       placeholder="email" 
                       name="email"
-                      class="form-control  <%= locals.errors && errors.email ? 'is-invalid':null %>">
+                      class="email form-control  <%= locals.errors && errors.email ? 'is-invalid':null %>">
                     </p>
                    
                     <p>
@@ -36,7 +37,7 @@
                       type="password" 
                       placeholder="Contraseña" 
                       name="password"
-                      class="form-control  <%= locals.errors && errors.email ? 'is-invalid':null %>" >
+                      class="password form-control  <%= locals.errors && errors.email ? 'is-invalid':null %>" >
                       <% if (locals.errors && errors.email) {%>
                              
                         <p style='color:red'><%= errors.email.msg %></p>
@@ -60,7 +61,7 @@
         </main>
         
         
-
+        <script src="./../../js/vLogin.js"></script>
     </body>
     <!-- FOOTER -->
 
