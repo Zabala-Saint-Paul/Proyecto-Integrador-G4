@@ -1,22 +1,26 @@
+let button = document.getElementById("contratar");
+var p = localStorage.getItem("cPasajes");
+if((p == null) || (p == "")){
+    document.querySelector(".carritoCompras").innerHTML = "";
+}
+else{
+    document.querySelector(".carritoCompras").innerHTML = p;
+}
+button.addEventListener("click",function(e){
 
-window.addEventListener("load", function(){
-    let btn = document.getElementById("contratar");
-    btn.addEventListener("click",function(e){
+    e.preventDefault();
+    var pasajes = prompt("Agrega la cantidad de Pasajes");
+    if(pasajes >= 0 ){
+    localStorage.setItem("cPasajes",pasajes);
+    console.log(localStorage);
+    window.location.href = "/productCart";
+    }
+});
 
-        e.preventDefault();
-        var pasajes = prompt("Agrega la cantidad de Pasajes");
-        localStorage.setItem("cPasajes",pasajes);
-        var p = localStorage.getItem("cPasajes");
-        // Al hacer click en "agregar al carrito", salta este prompt
-
-        // Muestro por pantalla el prompt
-        document.querySelector(".carritoCompras").innerHTML = "("+p+")";
-        // Guarda el valor del prompt
-
-
-        console.log(localStorage);
-    
-    });
-})
+var nombreViaje = document.getElementById("nombreViaje").innerHTML
+localStorage.setItem("nombreV", nombreViaje)
+var precioPasaje = document.getElementById("precioPasaje").innerHTML
+localStorage.setItem("precioV", precioPasaje)
+console.log(localStorage)
 
 

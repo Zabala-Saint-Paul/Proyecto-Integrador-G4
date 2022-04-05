@@ -19,26 +19,32 @@
             <div class="datComp">
                 <ul id = "ulReg">
                     <li class = "liReg">
-                        <p class="ncart form-control">Viaje</p>
+                        <label class="noTenesCta">Viaje:</label>
+                        <p class="nombreViaje ncart form-control">Viaje</p>
                         <div></div>
                     </li>
                     <li class = "liReg">
-                        <p class="ncart form-control">Precio Individual</p>
+                        <label class="noTenesCta">Precio Individual:</label>
+                        <p id="precioPasaje" class="precioPasaje ncart form-control">Precio Individual</p>
                         <div></div>
                     </li>
                     <li class = "liReg">
-                        <p class="ncart form-control">Pasajes:</p>
-                        <div class="carritoCompras"></div>
-                    </li>
-                    <li class = "liReg">
-                        <p class="ncart form-control">TOTAL</p>
+                        <label class="noTenesCta">Cantidad de pasajes:</label>
+                        <p class="pasajes ncart form-control">Pasajes</p>
                         <div></div>
                     </li>
-
+                    <li class = "liReg">
+                        <label class="noTenesCta">Precio total:</label>
+                        <p class="precioTotal ncart form-control">TOTAL</p>
+                        <div></div>
+                    </li>
                     <div class=".compras"></div>
-                    
                     <li>
                         <button id = "finCom" type="button" class="btn btn-primary">Finalizar Compra</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button style="width:10em"id="cancelar" type="button" class="btn btn-primary"> Cancelar compra </button>
                     </li>
                     <li>
                         <a id="valt" href="/" type="href" class="btn btn-link">Volver a la tienda</a>
@@ -46,8 +52,8 @@
                 </ul>
             </div>
         </main>
-        
-        
+        <script src="./../../js/carrito.js"></script>
+        <script src="./../../js/carrito2.js"></script>
     </body>
     	<!-- FOOTER -->
 

@@ -23,7 +23,7 @@
       </div>      
             <div class="two-column-product">
                 <ul id="ulImagenes"> 
-                  <h2><%=products.nombre%></h2>
+                  <h2 id="nombreViaje"><%=products.nombre%></h2>
                     <li> <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
@@ -49,7 +49,7 @@
                 </ul>
 
                 <ul class="column-right-side">
-                    <li class="precio"> <%=products.precio%></li>
+                    <li id="precioPasaje" class="precio"> <%=products.precio%></li>
                     <!--
                     <li>ingrese su mail</li>             
                     <li> <input type="email" placeholder="example@mail.com"></li>
@@ -60,6 +60,9 @@
                     <li><a href="#">Mas informacion</a></li>
                     <li><button type="button" class="btn btn-primary btn-lg">Proximos Vuelos</button></li>
                     <li><button id="contratar" type="button" class="btn btn-primary btn-lg"> Agregar al Carrito </button></li>
+                    <li>
+                      <button id="cancelar" type="button" class="btn-primary btn-lg"> Cancelar compra </button>
+                    </li>
                     <% if (locals.isLogged) {%>
                     <div class="btEliminar">  
                       <li><button type="button" class="btn btn-primary btn-lg"> <a class="editProduc" href="/edit/<%= products.id %>" class="action-button edit">Editar</a></button></li>
@@ -73,6 +76,7 @@
   <br>
         </main>
         <script src="./../../js/carrito.js"></script>
+        <script src="./../../js/carrito2.js"></script>
     </body>
     <!-- FOOTER -->
 
