@@ -1,6 +1,11 @@
+.divProductos{
+  color: white;
+}
+
 main{
   width:100%;
-  background-color: rgb(217, 223, 223);
+  background-image: url("../images/BCK.jpg");
+
   
 }
 

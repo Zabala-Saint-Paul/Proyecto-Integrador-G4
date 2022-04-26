@@ -1,5 +1,17 @@
 
 /* productDetail */
+.txt-productDetail{
+  color: white;
+}
+
+h3{
+  color: white;
+}
+
+#nombreViaje{
+  color: white;
+}
+
 .divTitu{
   padding-top: 8.3em;
   padding-left: 30px;
@@ -17,7 +29,6 @@
 
 .two-column-product{
   display: flex;
-  background-color: rgb(217, 223, 223);
  justify-content: space-evenly;
 }
 

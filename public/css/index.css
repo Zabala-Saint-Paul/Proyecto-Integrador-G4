@@ -30,7 +30,7 @@ main{
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  color: #6127D0;
+  color: white;
   padding-top: 8em;
 }
 
@@ -38,14 +38,14 @@ main{
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  color: #6127D0;
+  color: white;
   padding-top: 2em;
 }
 .descripcion-sitio{
   text-align: center;
   font-size: 15px;
   width: 90%;
-  color: #6127D0;
+  color: white;
 }
 
 .paquetito{

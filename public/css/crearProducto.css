@@ -10,6 +10,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    color: white;
 }
 .input1crear{
     width: 23em;

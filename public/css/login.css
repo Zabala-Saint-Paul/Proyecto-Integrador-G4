@@ -1,6 +1,5 @@
 .logi{
   display: flex;
-  background-color: rgb(217, 223, 223);
   justify-content: center ;
 }
 
@@ -24,6 +23,7 @@
   padding-top: 4em;
   justify-content: space-evenly;
   display: flex;
+  color: white;
 }
 
 #ingresar{
@@ -35,7 +35,7 @@
 }
 
 #noTenesCta{
-  color: rgba(0, 0, 0, 0.48);
+  color: white;
   font-size: 14px;
   font-weight: 500;
   margin-left: 0em;
